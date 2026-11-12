@@ -990,11 +990,14 @@ html[lang="en"] .phase-year { text-transform: uppercase; }
 }
 @media (min-width: 1024px) {
   .insights-layout {
-    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-columns: 0.85fr 1.15fr;
     gap: 1.75rem;
   }
-  /* featured card fills its column height with the image dominating */
-  .media-featured .media-thumb { aspect-ratio: 16 / 10; }
+  /* Compact featured card: content height only, no grid-row stretch */
+  .media-featured { align-self: start; }
+  .media-featured .media-title { font-size: 1.2rem; }
+  .media-featured .media-body { padding: 1.2rem 1.4rem 1.3rem; }
+  .insights-side { gap: 0.9rem; }
 }
 
 .media-card {
@@ -1007,7 +1010,6 @@ html[lang="en"] .phase-year { text-transform: uppercase; }
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  height: 100%;
   transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 .media-card:hover {
@@ -1026,6 +1028,9 @@ html[lang="en"] .phase-year { text-transform: uppercase; }
 .media-card:hover .media-thumb img { transform: scale(1.05); }
 
 .media-featured .media-thumb { aspect-ratio: 16 / 10.5; }
+@media (min-width: 1024px) {
+  .media-featured .media-thumb { aspect-ratio: 16 / 8; }
+}
 
 .media-tag {
   position: absolute;
@@ -1074,6 +1079,23 @@ html[lang="en"] .media-tag { text-transform: uppercase; letter-spacing: 0.1em; }
 .media-side .media-title { font-size: 1rem; line-height: 1.65; }
 @media (min-width: 1024px) {
   .media-side .media-title { font-size: 1.02rem; }
+}
+/* Side cards: horizontal layout (thumb beside body) keeps each row short on
+   desktop so the side column stays compact instead of a tall stretched stack */
+@media (min-width: 1024px) {
+  .media-side { flex-direction: row; align-items: stretch; }
+  .media-side .media-thumb {
+    width: 42%;
+    flex: none;
+    aspect-ratio: auto;
+    min-height: 96px;
+  }
+  .media-side .media-body {
+    flex: 1;
+    padding: 0.9rem 1.1rem;
+  }
+  .media-side .media-title { font-size: 0.95rem; line-height: 1.6; }
+  .media-side .media-meta { margin-top: 0.6rem; }
 }
 .media-side .media-desc { display: none; }
 .media-side.media-article .media-desc {
