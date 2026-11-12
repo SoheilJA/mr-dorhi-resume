@@ -1,0 +1,21 @@
+{
+  "name": "ali-dorhi-personal-brand",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Premium bilingual personal brand website for Ali Dorhi - business consultant, CEO of Chabok Sazan Arka",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "animejs": "^4.5.0",
+    "gsap": "^3.15.1"
+  }
+}

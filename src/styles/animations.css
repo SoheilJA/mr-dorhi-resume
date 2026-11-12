@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Ali Dorhi — animation utilities
+   Initial states are applied by JS (GSAP) only, so content stays accessible
+   when JS fails or prefers-reduced-motion is active.
+   ========================================================================== */
+
+/* JS-driven reveal targets get this class only while animating */
+[data-reveal] { will-change: transform, opacity; }
+
+/* Preloader ---------------------------------------------------------------- */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: var(--color-canvas, #f8f8f6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+}
+#preloader.done {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.55s ease, visibility 0.55s;
+}
+
+.preloader-mark {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-navy, #172b45);
+  letter-spacing: 0.02em;
+}
+.preloader-mark .accent { color: var(--color-accent, #2300b2); }
+
+.preloader-line {
+  width: 148px;
+  height: 2px;
+  background: var(--color-line, #e3e5e6);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.preloader-fill {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  background: var(--color-accent, #2300b2);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+html[dir="rtl"] .preloader-fill { transform-origin: right center; }
+
+.preloader-caption {
+  font-size: 0.68rem;
+  letter-spacing: 0.32em;
+  color: var(--color-muted, #737a83);
+  font-family: "Inter", "Vazirmatn", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Reduced motion ----------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scroll-hint .wheel::after { animation: none; }
+
+  #preloader.done { transition: none; }
+}
