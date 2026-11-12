@@ -972,6 +972,7 @@ html[lang="en"] .phase-year { text-transform: uppercase; }
 
 /* --------------------------------------------------------------------------
    Insights & media
+   Mobile-first: stacked cards. Desktop: featured hero + 2-col side grid.
    -------------------------------------------------------------------------- */
 .insights-layout {
   display: grid;
@@ -984,11 +985,16 @@ html[lang="en"] .phase-year { text-transform: uppercase; }
   gap: 1.25rem;
   align-content: start;
 }
+@media (min-width: 640px) {
+  .insights-side { grid-template-columns: 1fr 1fr; }
+}
 @media (min-width: 1024px) {
   .insights-layout {
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 1.5rem;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.75rem;
   }
+  /* featured card fills its column height with the image dominating */
+  .media-featured .media-thumb { aspect-ratio: 16 / 10; }
 }
 
 .media-card {
@@ -1057,20 +1063,18 @@ html[lang="en"] .media-tag { text-transform: uppercase; letter-spacing: 0.1em; }
 }
 .media-card:hover .play-badge { background: rgba(35, 0, 178, 0.75); scale: 1.06; }
 
-.media-side { display: flex; flex-direction: row; align-items: stretch; }
-.media-side .media-thumb {
-  width: 38%;
-  flex: none;
-  aspect-ratio: auto;
-  min-height: 118px;
-}
+.media-side { display: flex; flex-direction: column; }
+.media-side .media-thumb { width: 100%; aspect-ratio: 16 / 9; min-height: 0; }
 .media-side .media-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1.1rem 1.25rem;
 }
-.media-side .media-title { font-size: 0.98rem; }
+.media-side .media-title { font-size: 1rem; line-height: 1.65; }
+@media (min-width: 1024px) {
+  .media-side .media-title { font-size: 1.02rem; }
+}
 .media-side .media-desc { display: none; }
 .media-side.media-article .media-desc {
   display: -webkit-box;

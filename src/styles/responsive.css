@@ -23,9 +23,6 @@
 
   .consult-card { padding: 1.8rem 1.4rem; }
 
-  .media-side { flex-direction: column; }
-  .media-side .media-thumb { width: 100%; aspect-ratio: 16/9; min-height: 0; }
-
   .footer-top { flex-direction: column; align-items: flex-start; padding-block: 2.75rem; }
   .footer-nav { flex-direction: column; gap: 1rem; }
 
