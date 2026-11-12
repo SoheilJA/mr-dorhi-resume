@@ -190,15 +190,17 @@ export class Motion {
           ease: 'power3.out',
           scrollTrigger: { trigger: group, start: 'top 85%', once: true },
         });
-        const cells = group.querySelectorAll('.logo-cell');
-        gsap.from(cells, {
-          y: 18,
-          opacity: 0,
-          duration: 0.5,
-          ease: 'power2.out',
-          stagger: { each: 0.03, grid: 'auto', from: 'start' },
-          scrollTrigger: { trigger: group, start: 'top 80%', once: true },
-        });
+        if (!group.querySelector('.marquee-grid')) {
+          const cells = group.querySelectorAll('.logo-cell');
+          gsap.from(cells, {
+            y: 18,
+            opacity: 0,
+            duration: 0.5,
+            ease: 'power2.out',
+            stagger: { each: 0.03, grid: 'auto', from: 'start' },
+            scrollTrigger: { trigger: group, start: 'top 80%', once: true },
+          });
+        }
       });
 
       // Insights
