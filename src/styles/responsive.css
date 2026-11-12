@@ -26,9 +26,6 @@
   .media-side { flex-direction: column; }
   .media-side .media-thumb { width: 100%; aspect-ratio: 16/9; min-height: 0; }
 
-  .logo-cell { min-height: 74px; }
-  .logo-cell img { max-height: 42px; }
-
   .footer-top { flex-direction: column; align-items: flex-start; padding-block: 2.75rem; }
   .footer-nav { flex-direction: column; gap: 1rem; }
 
