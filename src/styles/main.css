@@ -877,44 +877,74 @@ html[lang="en"] .phase-year { text-transform: uppercase; }
 }
 .logo-cell:hover img { filter: grayscale(0); opacity: 1; }
 
-/* Mobile marquee — grid becomes a single auto-scrolling row */
-@media (max-width: 639.98px) {
-  .logo-grid {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
-  }
-  .logo-grid > li {
-    flex: 0 0 auto;
-    width: 44vw;
-    min-height: 72px;
-    padding: 0.8rem 1rem;
-  }
-  .logo-grid > li img { max-height: 40px; }
+/* ------------------------------------------------------------------
+   Marquee rows (all sizes) — .marquee-grid applied by JS
+   Desktop: tracks behave like normal grid children (display: contents
+   fallback handled via media query below)
+   ------------------------------------------------------------------ */
+.marquee-grid { list-style: none; }
 
-  [dir='ltr'] .logo-grid {
-    animation: logo-marquee-ltr 28s linear infinite;
-  }
-  [dir='rtl'] .logo-grid {
-    animation: logo-marquee-rtl 28s linear infinite;
-  }
-  .logo-grid.operational { animation-duration: 22s; }
+.marquee-track {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  width: max-content;
 }
-@keyframes logo-marquee-ltr {
+
+.marquee-track .logo-cell {
+  flex: 0 0 auto;
+  width: 150px;
+  min-height: 84px;
+  padding: 0.8rem 1rem;
+}
+
+/* Bigger, clearly visible logos everywhere */
+.logo-cell img {
+  max-height: 64px;
+  max-width: 128px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(0);
+  opacity: 1;
+  transition: transform 0.35s ease;
+}
+.logo-cell:hover img { transform: scale(1.06); }
+
+@media (min-width: 1024px) {
+  /* Restore original grid: tracks become transparent containers */
+  .marquee-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1rem; }
+  .marquee-grid .marquee-track { display: contents; }
+  .marquee-grid .marquee-track .logo-cell { width: auto; }
+  .marquee-grid .marquee-track .is-clone { display: none; }
+}
+
+@media (max-width: 1023.98px) {
+  .marquee-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  }
+  .marquee-grid .marquee-track .is-clone { display: flex; }
+
+  /* rtl = visual movement right→left; ltr = left→right */
+  .marquee-track[data-dir='rtl'] { animation: marquee-left 30s linear infinite; }
+  .marquee-track[data-dir='ltr'] { animation: marquee-right 30s linear infinite; }
+  .marquee-grid .marquee-track:nth-child(2) { animation-duration: 38s; }
+  .marquee-grid .marquee-track:nth-child(3) { animation-duration: 34s; }
+}
+@keyframes marquee-left {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
-@keyframes logo-marquee-rtl {
-  from { transform: translateX(0); }
-  to   { transform: translateX(50%); }
-}
-@media (min-width: 640px) {
-  .logo-grid > li.is-clone { display: none; }
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .logo-grid { animation: none !important; }
+  .marquee-track { animation: none !important; }
 }
 
 .collab-note {

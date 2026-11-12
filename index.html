@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ================= SEO ================= -->
   <title>علی درحی | مشاور و مدرس کسب‌وکار — مدیرعامل چابک‌سازان آرکا</title>
-  <meta name="description" content="وب‌سایت رسمی علی درحی؛ مشاور و مدرس کسب‌وکار و مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکا. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت." />
+  <meta name="description"
+    content="وب‌سایت رسمی علی درحی؛ مشاور و مدرس کسب‌وکار و مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکا. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Ali Dorhi" />
   <link rel="canonical" href="https://dorhi.ir/" />
@@ -19,7 +21,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ali Dorhi | علی درحی" />
   <meta property="og:title" content="علی درحی | مشاور و مدرس کسب‌وکار — مدیرعامل چابک‌سازان آرکا" />
-  <meta property="og:description" content="ساختار درست، مسیر رشد پایدار کسب‌وکار است. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت." />
+  <meta property="og:description"
+    content="ساختار درست، مسیر رشد پایدار کسب‌وکار است. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت." />
   <meta property="og:url" content="https://dorhi.ir/" />
   <meta property="og:image" content="https://dorhi.ir/images/portrait.jpg" />
   <meta property="og:locale" content="fa_IR" />
@@ -46,6 +49,7 @@
       font-style: normal;
       font-display: swap;
     }
+
     @font-face {
       font-family: "Inter";
       src: url("fonts/Inter-Latin-Variable.woff2") format("woff2-variations");
@@ -65,21 +69,86 @@
 
   <!-- Critical preloader styles (rest loads via bundle) -->
   <style>
-    #preloader{position:fixed;inset:0;z-index:300;background:#F8F8F6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;font-family:"Vazirmatn",Tahoma,sans-serif;transition:opacity .55s ease,visibility .55s}
-    #preloader.done{opacity:0;visibility:hidden;pointer-events:none}
-    .preloader-mark{font-size:1.7rem;font-weight:700;color:#172B45}
-    .preloader-mark i{font-style:normal;color:#2300B2}
-    .preloader-line{width:148px;height:2px;background:#E3E5E6;border-radius:2px;overflow:hidden;position:relative}
-    .preloader-fill{position:absolute;top:0;bottom:0;left:0;width:100%;background:#2300B2;transform:scaleX(0);transform-origin:left center}
-    html[dir="rtl"] .preloader-fill{transform-origin:right center}
-    .preloader-caption{font-size:.68rem;letter-spacing:.32em;color:#737A83;font-family:"Inter","Vazirmatn",sans-serif;text-transform:uppercase}
-    @media (prefers-reduced-motion:reduce){#preloader{transition:none}}
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: #F8F8F6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.4rem;
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      transition: opacity .55s ease, visibility .55s
+    }
+
+    #preloader.done {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none
+    }
+
+    .preloader-mark {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #172B45
+    }
+
+    .preloader-mark i {
+      font-style: normal;
+      color: #2300B2
+    }
+
+    .preloader-line {
+      width: 148px;
+      height: 2px;
+      background: #E3E5E6;
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative
+    }
+
+    .preloader-fill {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #2300B2;
+      transform: scaleX(0);
+      transform-origin: left center
+    }
+
+    html[dir="rtl"] .preloader-fill {
+      transform-origin: right center
+    }
+
+    .preloader-caption {
+      font-size: .68rem;
+      letter-spacing: .32em;
+      color: #737A83;
+      font-family: "Inter", "Vazirmatn", sans-serif;
+      text-transform: uppercase
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      #preloader {
+        transition: none
+      }
+    }
   </style>
-  <noscript><style>#preloader{display:none}</style></noscript>
+  <noscript>
+    <style>
+      #preloader {
+        display: none
+      }
+    </style>
+  </noscript>
 
   <!-- Restore language direction before first paint -->
   <script>
-    (function(){try{if(localStorage.getItem('dorhi-lang')==='en'){document.documentElement.lang='en';document.documentElement.dir='ltr';}}catch(e){}})();
+    (function () { try { if (localStorage.getItem('dorhi-lang') === 'en') { document.documentElement.lang = 'en'; document.documentElement.dir = 'ltr'; } } catch (e) { } })();
   </script>
 
   <!-- Structured data: Person -->
@@ -126,7 +195,9 @@
   <!-- ================= Preloader ================= -->
   <div id="preloader" aria-hidden="true">
     <div class="preloader-mark"><span data-i18n="preloader.mark">علی درحی</span><i>.</i></div>
-    <div class="preloader-line"><div class="preloader-fill"></div></div>
+    <div class="preloader-line">
+      <div class="preloader-fill"></div>
+    </div>
     <div class="preloader-caption" data-i18n="preloader.caption">dorhi.ir</div>
   </div>
 
@@ -148,11 +219,15 @@
 
         <div class="header-actions">
           <div class="lang-switch" role="group" data-i18n-attr="aria-label:a11y.langSwitch" aria-label="انتخاب زبان">
-            <button class="lang-btn" type="button" data-lang="fa" aria-pressed="true" data-i18n-attr="aria-label:a11y.langFa" aria-label="فارسی">فا</button>
-            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" data-i18n-attr="aria-label:a11y.langEn" aria-label="انگلیسی">EN</button>
+            <button class="lang-btn" type="button" data-lang="fa" aria-pressed="true"
+              data-i18n-attr="aria-label:a11y.langFa" aria-label="فارسی">فا</button>
+            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false"
+              data-i18n-attr="aria-label:a11y.langEn" aria-label="انگلیسی">EN</button>
           </div>
-          <a class="btn btn-primary header-cta" href="https://dorhi.ir/counseling/" target="_blank" rel="noopener" data-i18n="nav.cta">رزرو مشاوره</a>
-          <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-i18n-attr="aria-label:a11y.toggleMenu" aria-label="باز و بسته کردن منو">
+          <a class="btn btn-primary header-cta" href="https://dorhi.ir/counseling/" target="_blank" rel="noopener"
+            data-i18n="nav.cta">رزرو مشاوره</a>
+          <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"
+            data-i18n-attr="aria-label:a11y.toggleMenu" aria-label="باز و بسته کردن منو">
             <span class="bar"></span><span class="bar"></span><span class="bar"></span>
           </button>
         </div>
@@ -163,19 +238,28 @@
   <!-- Mobile menu -->
   <div id="mobile-menu" data-i18n-attr="aria-label:a11y.mobileMenu" aria-label="منوی موبایل">
     <nav>
-      <a class="mobile-link" href="#about"><span data-i18n="nav.about">درباره</span><span class="m-index" data-digits="01">۰۱</span></a>
-      <a class="mobile-link" href="#expertise"><span data-i18n="nav.expertise">تخصص‌ها</span><span class="m-index" data-digits="02">۰۲</span></a>
-      <a class="mobile-link" href="#journey"><span data-i18n="nav.journey">مسیر حرفه‌ای</span><span class="m-index" data-digits="03">۰۳</span></a>
-      <a class="mobile-link" href="#collaborations"><span data-i18n="nav.collaborations">همراهان</span><span class="m-index" data-digits="04">۰۴</span></a>
-      <a class="mobile-link" href="#insights"><span data-i18n="nav.insights">دیدگاه‌ها</span><span class="m-index" data-digits="05">۰۵</span></a>
-      <a class="mobile-link" href="#contact"><span data-i18n="nav.contact">تماس</span><span class="m-index" data-digits="06">۰۶</span></a>
+      <a class="mobile-link" href="#about"><span data-i18n="nav.about">درباره</span><span class="m-index"
+          data-digits="01">۰۱</span></a>
+      <a class="mobile-link" href="#expertise"><span data-i18n="nav.expertise">تخصص‌ها</span><span class="m-index"
+          data-digits="02">۰۲</span></a>
+      <a class="mobile-link" href="#journey"><span data-i18n="nav.journey">مسیر حرفه‌ای</span><span class="m-index"
+          data-digits="03">۰۳</span></a>
+      <a class="mobile-link" href="#collaborations"><span data-i18n="nav.collaborations">همراهان</span><span
+          class="m-index" data-digits="04">۰۴</span></a>
+      <a class="mobile-link" href="#insights"><span data-i18n="nav.insights">دیدگاه‌ها</span><span class="m-index"
+          data-digits="05">۰۵</span></a>
+      <a class="mobile-link" href="#contact"><span data-i18n="nav.contact">تماس</span><span class="m-index"
+          data-digits="06">۰۶</span></a>
     </nav>
     <div class="mobile-menu-foot">
       <div class="lang-switch">
-        <button class="lang-btn" type="button" data-lang="fa" aria-pressed="true" data-i18n-attr="aria-label:a11y.langFa" aria-label="فارسی">فا</button>
-        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" data-i18n-attr="aria-label:a11y.langEn" aria-label="انگلیسی">EN</button>
+        <button class="lang-btn" type="button" data-lang="fa" aria-pressed="true"
+          data-i18n-attr="aria-label:a11y.langFa" aria-label="فارسی">فا</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false"
+          data-i18n-attr="aria-label:a11y.langEn" aria-label="انگلیسی">EN</button>
       </div>
-      <a class="btn btn-primary" href="https://dorhi.ir/counseling/" target="_blank" rel="noopener" data-i18n="nav.cta">رزرو مشاوره</a>
+      <a class="btn btn-primary" href="https://dorhi.ir/counseling/" target="_blank" rel="noopener"
+        data-i18n="nav.cta">رزرو مشاوره</a>
     </div>
   </div>
 
@@ -184,7 +268,8 @@
     <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="container-x" style="position:relative;height:100%">
         <div class="hero-hairlines" aria-hidden="true">
-          <span style="left:0"></span><span style="left:25%"></span><span style="left:50%"></span><span style="left:75%"></span><span style="left:100%"></span>
+          <span style="left:0"></span><span style="left:25%"></span><span style="left:50%"></span><span
+            style="left:75%"></span><span style="left:100%"></span>
         </div>
 
         <div class="hero-grid">
@@ -192,16 +277,23 @@
             <p class="eyebrow" data-i18n="hero.eyebrow">مشاور و مدرس کسب‌وکار · مدیرعامل چابک‌سازان آرکا</p>
             <h1 class="hero-title" id="hero-title">
               <span class="line-mask"><span class="line-inner" data-i18n="hero.titleLine1">ساختار درست،</span></span>
-              <span class="line-mask"><span class="line-inner"><span data-i18n="hero.titleLine2pre">مسیر</span> <span class="accent" data-i18n="hero.titleLine2accent">رشد پایدار</span></span></span>
+              <span class="line-mask"><span class="line-inner"><span data-i18n="hero.titleLine2pre">مسیر</span> <span
+                    class="accent" data-i18n="hero.titleLine2accent">رشد پایدار</span></span></span>
               <span class="line-mask"><span class="line-inner" data-i18n="hero.titleLine3">کسب‌وکار است.</span></span>
             </h1>
-            <p class="hero-desc" data-i18n="hero.desc">آنچه علی درحی می‌آموزد و می‌آموزاند، علمی و تجربه‌شده است؛ آمیزه‌ای که از دل ۲۰ سال تجربه اجرایی و عملیاتی در حوزه صنعت و همکاری با برندهای مطرح ملی و بین‌المللی به دست آمده است.</p>
+            <p class="hero-desc" data-i18n="hero.desc">آنچه علی درحی می‌آموزد و می‌آموزاند، علمی و تجربه‌شده است؛
+              آمیزه‌ای که از دل ۲۰ سال تجربه اجرایی و عملیاتی در حوزه صنعت و همکاری با برندهای مطرح ملی و بین‌المللی به
+              دست آمده است.</p>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="https://dorhi.ir/counseling/" target="_blank" rel="noopener" data-i18n="hero.ctaPrimary">رزرو جلسه مشاوره</a>
+              <a class="btn btn-primary" href="https://dorhi.ir/counseling/" target="_blank" rel="noopener"
+                data-i18n="hero.ctaPrimary">رزرو جلسه مشاوره</a>
               <a class="link-arrow" href="#journey">
                 <span data-i18n="hero.ctaSecondary">آشنایی با مسیر حرفه‌ای</span>
-                <svg class="flip-rtl" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                <svg class="flip-rtl" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
               </a>
             </div>
 
@@ -220,9 +312,11 @@
           <div class="hero-visual">
             <figure class="portrait-card">
               <div class="portrait-frame" aria-hidden="true"></div>
-              <img src="images/portrait.webp" alt="پرتره علی درحی، مشاور کسب‌وکار" width="880" height="1108" fetchpriority="high" decoding="async" data-i18n-attr="alt:hero.portraitAlt" />
+              <img src="images/portrait.webp" alt="پرتره علی درحی، مشاور کسب‌وکار" width="880" height="1108"
+                fetchpriority="high" decoding="async" data-i18n-attr="alt:hero.portraitAlt" />
             </figure>
-            <p class="portrait-caption" data-i18n="hero.portraitCaption">علی درحی — مشاور سازمانی و مدیرعامل چابک‌سازان آرکا</p>
+            <p class="portrait-caption" data-i18n="hero.portraitCaption">علی درحی — مشاور سازمانی و مدیرعامل چابک‌سازان
+              آرکا</p>
           </div>
         </div>
       </div>
@@ -238,14 +332,19 @@
       <div class="container-x">
         <div class="section-head">
           <p class="section-index" data-i18n="overview.index">۰۱ — درباره</p>
-          <h2 class="section-title" id="about-title" data-i18n="overview.title">تجربه‌ای که به ساختن مسیرهای بهتر می‌انجامد.</h2>
+          <h2 class="section-title" id="about-title" data-i18n="overview.title">تجربه‌ای که به ساختن مسیرهای بهتر
+            می‌انجامد.</h2>
         </div>
 
         <div class="about-grid">
           <div class="about-copy">
-            <p class="lead" data-i18n="overview.lead">علی درحی مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکاست؛ جایی که تجربه سال‌ها مدیریت اجرایی در صنعت، امروز در خدمت رشد کسب‌وکارهاست.</p>
-            <p data-i18n="overview.p2">او حدود دو دهه در سمت‌های اجرایی و عملیاتی صنعت فعالیت کرده و با برندهای مطرح ملی و بین‌المللی همکاری داشته است. از سال ۱۳۹۸، فعالیت رسمی خود را در حوزه مشاوره و آموزش — بازاریابی، فروش و مدیریت — آغاز کرده و تجربه‌اش را در اختیار کسب‌وکارهای متعددی قرار داده است.</p>
-            <p data-i18n="overview.p3">رسالت او، کمک و همراهی کسب‌وکارهای ایران در ایجاد ساختار صحیح و ارتقای عملکرد سازمانی است؛ با رویکردی که خودش سه اصل آن را چنین توصیف می‌کند:</p>
+            <p class="lead" data-i18n="overview.lead">علی درحی مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکاست؛ جایی که
+              تجربه سال‌ها مدیریت اجرایی در صنعت، امروز در خدمت رشد کسب‌وکارهاست.</p>
+            <p data-i18n="overview.p2">او حدود دو دهه در سمت‌های اجرایی و عملیاتی صنعت فعالیت کرده و با برندهای مطرح ملی
+              و بین‌المللی همکاری داشته است. از سال ۱۳۹۸، فعالیت رسمی خود را در حوزه مشاوره و آموزش — بازاریابی، فروش و
+              مدیریت — آغاز کرده و تجربه‌اش را در اختیار کسب‌وکارهای متعددی قرار داده است.</p>
+            <p data-i18n="overview.p3">رسالت او، کمک و همراهی کسب‌وکارهای ایران در ایجاد ساختار صحیح و ارتقای عملکرد
+              سازمانی است؛ با رویکردی که خودش سه اصل آن را چنین توصیف می‌کند:</p>
           </div>
 
           <aside class="about-aside">
@@ -255,16 +354,22 @@
             </div>
             <div class="principles">
               <div class="principle">
-                <h3 class="principle-head"><span class="p-mark" data-digits="01">۰۱</span><span data-i18n="overview.principles.0.title">ساده، اما عملگرا</span></h3>
-                <p class="principle-desc" data-i18n="overview.principles.0.desc">آنچه می‌آموزد و می‌آموزاند، علمی و تجربه‌شده است.</p>
+                <h3 class="principle-head"><span class="p-mark" data-digits="01">۰۱</span><span
+                    data-i18n="overview.principles.0.title">ساده، اما عملگرا</span></h3>
+                <p class="principle-desc" data-i18n="overview.principles.0.desc">آنچه می‌آموزد و می‌آموزاند، علمی و
+                  تجربه‌شده است.</p>
               </div>
               <div class="principle">
-                <h3 class="principle-head"><span class="p-mark" data-digits="02">۰۲</span><span data-i18n="overview.principles.1.title">ساده، اما رشدآفرین</span></h3>
-                <p class="principle-desc" data-i18n="overview.principles.1.desc">کسب‌وکارهای متعددی با آموزش‌های او به رشد رسیده‌اند.</p>
+                <h3 class="principle-head"><span class="p-mark" data-digits="02">۰۲</span><span
+                    data-i18n="overview.principles.1.title">ساده، اما رشدآفرین</span></h3>
+                <p class="principle-desc" data-i18n="overview.principles.1.desc">کسب‌وکارهای متعددی با آموزش‌های او به
+                  رشد رسیده‌اند.</p>
               </div>
               <div class="principle">
-                <h3 class="principle-head"><span class="p-mark" data-digits="03">۰۳</span><span data-i18n="overview.principles.2.title">ساده، اما ساختاریافته</span></h3>
-                <p class="principle-desc" data-i18n="overview.principles.2.desc">آموزش‌های او در جهت ساختار صحیح و ارتقای سازمانی است.</p>
+                <h3 class="principle-head"><span class="p-mark" data-digits="03">۰۳</span><span
+                    data-i18n="overview.principles.2.title">ساده، اما ساختاریافته</span></h3>
+                <p class="principle-desc" data-i18n="overview.principles.2.desc">آموزش‌های او در جهت ساختار صحیح و
+                  ارتقای سازمانی است.</p>
               </div>
             </div>
           </aside>
@@ -272,13 +377,16 @@
 
         <div class="photo-strip">
           <figure class="photo-item">
-            <img src="images/photo-03.webp" alt="جلسه کاری و ضبط محتوا در کنار مجموعه‌ها" width="1000" height="750" loading="lazy" decoding="async" data-i18n-attr="alt:overview.photoAlt.0" />
+            <img src="images/photo-03.webp" alt="جلسه کاری و ضبط محتوا در کنار مجموعه‌ها" width="1000" height="750"
+              loading="lazy" decoding="async" data-i18n-attr="alt:overview.photoAlt.0" />
           </figure>
           <figure class="photo-item">
-            <img src="images/photo-05.webp" alt="گروه همراهی در یک جلسه مشاوره" width="1000" height="750" loading="lazy" decoding="async" data-i18n-attr="alt:overview.photoAlt.1" />
+            <img src="images/photo-05.webp" alt="گروه همراهی در یک جلسه مشاوره" width="1000" height="750" loading="lazy"
+              decoding="async" data-i18n-attr="alt:overview.photoAlt.1" />
           </figure>
           <figure class="photo-item">
-            <img src="images/photo-08.webp" alt="کارگاه آموزشی با حضور مدیران" width="1000" height="750" loading="lazy" decoding="async" data-i18n-attr="alt:overview.photoAlt.2" />
+            <img src="images/photo-08.webp" alt="کارگاه آموزشی با حضور مدیران" width="1000" height="750" loading="lazy"
+              decoding="async" data-i18n-attr="alt:overview.photoAlt.2" />
           </figure>
         </div>
         <p class="strip-caption" data-i18n="overview.stripCaption">قاب همراهی — ثبت لحظاتی چند، در کنار مجموعه‌ها</p>
@@ -290,75 +398,113 @@
       <div class="container-x">
         <div class="section-head">
           <p class="section-index" data-i18n="expertise.index">۰۲ — تخصص‌ها</p>
-          <h2 class="section-title" id="expertise-title" data-i18n="expertise.title">حوزه‌هایی که تجربه در آن‌ها به نتیجه می‌رسد.</h2>
-          <p class="section-sub" data-i18n="expertise.sub">تمرکز بر آنچه در جلسات واقعی کسب‌وکار، بارها آزموده و اجرایی شده است.</p>
+          <h2 class="section-title" id="expertise-title" data-i18n="expertise.title">حوزه‌هایی که تجربه در آن‌ها به
+            نتیجه می‌رسد.</h2>
+          <p class="section-sub" data-i18n="expertise.sub">تمرکز بر آنچه در جلسات واقعی کسب‌وکار، بارها آزموده و اجرایی
+            شده است.</p>
         </div>
 
         <div class="expertise-grid">
           <article class="exp-card">
             <div class="exp-top">
               <span class="exp-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="5" rx="1"/><rect x="2" y="16" width="6" height="5" rx="1"/><rect x="16" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M12 12H5v4M12 12h7v4"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="3" width="6" height="5" rx="1" />
+                  <rect x="2" y="16" width="6" height="5" rx="1" />
+                  <rect x="16" y="16" width="6" height="5" rx="1" />
+                  <path d="M12 8v4M12 12H5v4M12 12h7v4" />
+                </svg>
               </span>
               <span class="exp-index" data-digits="01">۰۱</span>
             </div>
             <h3 class="exp-title" data-i18n="expertise.items.0.title">توسعه ساختاری سازمان</h3>
-            <p class="exp-desc" data-i18n="expertise.items.0.desc">طراحی و استقرار ساختارهایی که سازمان را برای رشد پایدار آماده می‌کند؛ از شفاف‌سازی نقش‌ها تا فرایندهای درست.</p>
+            <p class="exp-desc" data-i18n="expertise.items.0.desc">طراحی و استقرار ساختارهایی که سازمان را برای رشد
+              پایدار آماده می‌کند؛ از شفاف‌سازی نقش‌ها تا فرایندهای درست.</p>
           </article>
 
           <article class="exp-card">
             <div class="exp-top">
               <span class="exp-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 17l6-6 4 4 8-9" />
+                  <path d="M15 6h6v6" />
+                </svg>
               </span>
               <span class="exp-index" data-digits="02">۰۲</span>
             </div>
             <h3 class="exp-title" data-i18n="expertise.items.1.title">بازاریابی و استراتژی فروش</h3>
-            <p class="exp-desc" data-i18n="expertise.items.1.desc">تدوین مسیرهای عملی بازاریابی و فروش، بر پایه تجربه واقعی بازار — نه نسخه‌های تکراری.</p>
+            <p class="exp-desc" data-i18n="expertise.items.1.desc">تدوین مسیرهای عملی بازاریابی و فروش، بر پایه تجربه
+              واقعی بازار — نه نسخه‌های تکراری.</p>
           </article>
 
           <article class="exp-card">
             <div class="exp-top">
               <span class="exp-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M15.5 8.5l-2 5-5 2 2-5 5-2z" />
+                </svg>
               </span>
               <span class="exp-index" data-digits="03">۰۳</span>
             </div>
             <h3 class="exp-title" data-i18n="expertise.items.2.title">مدیریت کسب‌وکار</h3>
-            <p class="exp-desc" data-i18n="expertise.items.2.desc">همراهی مدیران در تصمیم‌ها و چالش‌های اداره کسب‌وکار؛ از نگاه سیستمی تا نتیجه‌گرایی صحیح.</p>
+            <p class="exp-desc" data-i18n="expertise.items.2.desc">همراهی مدیران در تصمیم‌ها و چالش‌های اداره کسب‌وکار؛
+              از نگاه سیستمی تا نتیجه‌گرایی صحیح.</p>
           </article>
 
           <article class="exp-card">
             <div class="exp-top">
               <span class="exp-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15a8 8 0 0 1 16 0"/><path d="M12 15l4-4"/><circle cx="12" cy="15" r="1.4"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 15a8 8 0 0 1 16 0" />
+                  <path d="M12 15l4-4" />
+                  <circle cx="12" cy="15" r="1.4" />
+                </svg>
               </span>
               <span class="exp-index" data-digits="04">۰۴</span>
             </div>
             <h3 class="exp-title" data-i18n="expertise.items.3.title">افزایش بهره‌وری</h3>
-            <p class="exp-desc" data-i18n="expertise.items.3.desc">بهبود عملکرد سازمان با نگاه دقیق به فرایندها، منابع و انگیزهٔ انسانی.</p>
+            <p class="exp-desc" data-i18n="expertise.items.3.desc">بهبود عملکرد سازمان با نگاه دقیق به فرایندها، منابع و
+              انگیزهٔ انسانی.</p>
           </article>
 
           <article class="exp-card">
             <div class="exp-top">
               <span class="exp-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="5.5" cy="6" r="2.5"/><circle cx="18.5" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 7.5L10.5 16M16.5 7.5L13.5 16M8 6h8"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="5.5" cy="6" r="2.5" />
+                  <circle cx="18.5" cy="6" r="2.5" />
+                  <circle cx="12" cy="18" r="2.5" />
+                  <path d="M7.5 7.5L10.5 16M16.5 7.5L13.5 16M8 6h8" />
+                </svg>
               </span>
               <span class="exp-index" data-digits="05">۰۵</span>
             </div>
             <h3 class="exp-title" data-i18n="expertise.items.4.title">تفکر سیستمی</h3>
-            <p class="exp-desc" data-i18n="expertise.items.4.desc">نگاه کل‌نگر به سازمان برای یافتن ریشه‌ها، نه صرفاً نشانه‌ها.</p>
+            <p class="exp-desc" data-i18n="expertise.items.4.desc">نگاه کل‌نگر به سازمان برای یافتن ریشه‌ها، نه صرفاً
+              نشانه‌ها.</p>
           </article>
 
           <article class="exp-card">
             <div class="exp-top">
               <span class="exp-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <circle cx="12" cy="12" r="5" />
+                  <circle cx="12" cy="12" r="1.2" fill="currentColor" />
+                </svg>
               </span>
               <span class="exp-index" data-digits="06">۰۶</span>
             </div>
             <h3 class="exp-title" data-i18n="expertise.items.5.title">اجرا و عملیاتی‌سازی اهداف</h3>
-            <p class="exp-desc" data-i18n="expertise.items.5.desc">تبدیل اهداف کلان به برنامه‌های اجرایی قابل پیگیری و نتیجه‌محور.</p>
+            <p class="exp-desc" data-i18n="expertise.items.5.desc">تبدیل اهداف کلان به برنامه‌های اجرایی قابل پیگیری و
+              نتیجه‌محور.</p>
           </article>
         </div>
       </div>
@@ -370,7 +516,8 @@
         <div class="section-head">
           <p class="section-index" data-i18n="journey.index">۰۳ — مسیر حرفه‌ای</p>
           <h2 class="section-title" id="journey-title" data-i18n="journey.title">از دل صنعت، تا مشاورهٔ کسب‌وکارها.</h2>
-          <p class="section-sub" data-i18n="journey.sub">مسیری که با تجربه ساخته شده است؛ بدون شتابزدگی و با تکیه بر عمل.</p>
+          <p class="section-sub" data-i18n="journey.sub">مسیری که با تجربه ساخته شده است؛ بدون شتابزدگی و با تکیه بر
+            عمل.</p>
         </div>
 
         <div class="journey-wrap">
@@ -381,28 +528,32 @@
               <span class="phase-dot" aria-hidden="true"></span>
               <p class="phase-year" data-i18n="journey.phases.0.tag">دو دهه تجربه</p>
               <h3 class="phase-title" data-i18n="journey.phases.0.title">در دل صنعت</h3>
-              <p class="phase-desc" data-i18n="journey.phases.0.desc">فعالیت اجرایی و عملیاتی در حوزه صنعت و همکاری با برندهای مطرح ملی و بین‌المللی؛ دوره‌ای که بستر اصلی دانش امروز اوست.</p>
+              <p class="phase-desc" data-i18n="journey.phases.0.desc">فعالیت اجرایی و عملیاتی در حوزه صنعت و همکاری با
+                برندهای مطرح ملی و بین‌المللی؛ دوره‌ای که بستر اصلی دانش امروز اوست.</p>
             </article>
 
             <article class="phase">
               <span class="phase-dot" aria-hidden="true"></span>
               <p class="phase-year" data-i18n="journey.phases.1.tag">۱۳۹۸</p>
               <h3 class="phase-title" data-i18n="journey.phases.1.title">آغاز رسمی مشاوره و آموزش</h3>
-              <p class="phase-desc" data-i18n="journey.phases.1.desc">شروع رسمی فعالیت مشاوره و آموزش در بازاریابی، فروش و مدیریت، و در اختیار گذاشتن تجربه‌ها به کسب‌وکارها.</p>
+              <p class="phase-desc" data-i18n="journey.phases.1.desc">شروع رسمی فعالیت مشاوره و آموزش در بازاریابی، فروش
+                و مدیریت، و در اختیار گذاشتن تجربه‌ها به کسب‌وکارها.</p>
             </article>
 
             <article class="phase">
               <span class="phase-dot" aria-hidden="true"></span>
               <p class="phase-year" data-i18n="journey.phases.2.tag">رسالت</p>
               <h3 class="phase-title" data-i18n="journey.phases.2.title">همراهی کسب‌وکارهای ایران</h3>
-              <p class="phase-desc" data-i18n="journey.phases.2.desc">کمک به کسب‌وکارها برای ایجاد ساختار صحیح و ارتقای سازمانی؛ مسیری که امروز نیز با همان دقت ادامه دارد.</p>
+              <p class="phase-desc" data-i18n="journey.phases.2.desc">کمک به کسب‌وکارها برای ایجاد ساختار صحیح و ارتقای
+                سازمانی؛ مسیری که امروز نیز با همان دقت ادامه دارد.</p>
             </article>
 
             <article class="phase">
               <span class="phase-dot" aria-hidden="true"></span>
               <p class="phase-year" data-i18n="journey.phases.3.tag">امروز</p>
               <h3 class="phase-title" data-i18n="journey.phases.3.title">چابک‌سازان آرکا</h3>
-              <p class="phase-desc" data-i18n="journey.phases.3.desc">مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکا؛ مشاوره، آموزش و توسعه سازمانی در کنار مجموعه‌هایی که به رشد رسیده‌اند.</p>
+              <p class="phase-desc" data-i18n="journey.phases.3.desc">مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکا؛
+                مشاوره، آموزش و توسعه سازمانی در کنار مجموعه‌هایی که به رشد رسیده‌اند.</p>
             </article>
           </div>
         </div>
@@ -415,7 +566,8 @@
         <div class="section-head">
           <p class="section-index" data-i18n="collab.index">۰۴ — همراهان</p>
           <h2 class="section-title" id="collab-title" data-i18n="collab.title">مجموعه‌هایی که در کنارشان بوده‌ام.</h2>
-          <p class="section-sub" data-i18n="collab.sub">همراهی‌ها در دو سطح متفاوت اما مکمل انجام شده است؛ بعضی مجموعه‌ها از دل عملیات و اجرا، و بعضی از مسیر مشاوره.</p>
+          <p class="section-sub" data-i18n="collab.sub">همراهی‌ها در دو سطح متفاوت اما مکمل انجام شده است؛ بعضی
+            مجموعه‌ها از دل عملیات و اجرا، و بعضی از مسیر مشاوره.</p>
         </div>
 
         <div class="collab-groups">
@@ -425,12 +577,18 @@
               <span class="group-count" data-i18n="collab.opCount">۶ مجموعه</span>
             </div>
             <ul class="logo-grid operational" role="list">
-              <li class="logo-cell"><img src="logos/logo-15.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
-              <li class="logo-cell"><img src="logos/logo-17.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
-              <li class="logo-cell"><img src="logos/logo-23.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
-              <li class="logo-cell"><img src="logos/logo-32.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
-              <li class="logo-cell"><img src="logos/logo-33.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
-              <li class="logo-cell"><img src="logos/logo-10.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
+              <li class="logo-cell"><img src="logos/logo-15.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
+              <li class="logo-cell"><img src="logos/logo-17.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
+              <li class="logo-cell"><img src="logos/logo-23.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
+              <li class="logo-cell"><img src="logos/logo-32.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
+              <li class="logo-cell"><img src="logos/logo-33.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
+              <li class="logo-cell"><img src="logos/logo-10.png" alt="لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltOp" /></li>
             </ul>
           </div>
 
@@ -440,35 +598,64 @@
               <span class="group-count" data-i18n="collab.coCount">۲۹ مجموعه</span>
             </div>
             <ul class="logo-grid consulting" role="list">
-              <li class="logo-cell"><img src="logos/logo-11.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-12.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-13.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-14.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-16.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-18.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-19.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-20.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-21.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-22.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-24.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-25.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-26.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-27.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-28.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-29.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-30.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-31.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-34.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-35.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-01.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-02.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-03.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-04.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-05.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-06.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-07.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-08.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
-              <li class="logo-cell"><img src="logos/logo-09.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای" width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-11.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-12.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-13.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-14.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-16.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-18.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-19.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-20.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-21.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-22.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-24.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-25.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-26.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-27.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-28.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-29.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-30.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-31.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-34.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-35.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-01.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-02.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-03.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-04.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-05.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-06.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-07.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-08.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
+              <li class="logo-cell"><img src="logos/logo-09.png" alt="لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای"
+                  width="240" height="160" loading="lazy" decoding="async" data-i18n-attr="alt:collab.logoAltCo" /></li>
             </ul>
           </div>
         </div>
@@ -481,96 +668,136 @@
         <div class="section-head">
           <p class="section-index" data-i18n="insights.index">۰۵ — دیدگاه‌ها</p>
           <h2 class="section-title" id="insights-title" data-i18n="insights.title">دیدگاه‌ها و روایت‌ها.</h2>
-          <p class="section-sub" data-i18n="insights.sub">گزیده‌ای از ویدئوها و مقالات درباره رشد سازمانی، مدیریت فروش و سلامت مالی کسب‌وکار.</p>
+          <p class="section-sub" data-i18n="insights.sub">گزیده‌ای از ویدئوها و مقالات درباره رشد سازمانی، مدیریت فروش و
+            سلامت مالی کسب‌وکار.</p>
         </div>
 
         <div class="insights-layout">
-          <a class="media-card media-featured" href="https://dorhi.ir/%d8%a8%d8%ad%d8%b1%d8%a7%d9%86-%d8%ac%d9%86%da%af%d8%8c%d8%aa%d8%ac%d8%b1%d8%a8%db%8c%d8%a7%d8%aa-%d8%b4%d8%ae%d8%b5%db%8c-%d8%ac%d9%86%d8%a7%d8%a8-%d9%85%d9%87%d9%86%d8%af%d8%b3-%d8%af%d8%b1%d8%ad/" target="_blank" rel="noopener">
+          <a class="media-card media-featured"
+            href="https://dorhi.ir/%d8%a8%d8%ad%d8%b1%d8%a7%d9%86-%d8%ac%d9%86%da%af%d8%8c%d8%aa%d8%ac%d8%b1%d8%a8%db%8c%d8%a7%d8%aa-%d8%b4%d8%ae%d8%b5%db%8c-%d8%ac%d9%86%d8%a7%d8%a8-%d9%85%d9%87%d9%86%d8%af%d8%b3-%d8%af%d8%b1%d8%ad/"
+            target="_blank" rel="noopener">
             <div class="media-thumb">
-              <img src="media/video-crisis.webp" alt="ویدئوی بحران جنگ و تجربیات شخصی علی درحی" width="900" height="658" loading="lazy" decoding="async" data-i18n-attr="alt:insights.items.0.alt" />
+              <img src="media/video-crisis.webp" alt="ویدئوی بحران جنگ و تجربیات شخصی علی درحی" width="900" height="658"
+                loading="lazy" decoding="async" data-i18n-attr="alt:insights.items.0.alt" />
               <span class="media-tag" data-i18n="insights.tagVideo">ویدئو</span>
               <span class="play-badge" aria-hidden="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5.5v13l11-6.5-11-6.5z" />
+                </svg>
               </span>
             </div>
             <div class="media-body">
               <h3 class="media-title" data-i18n="insights.items.0.title">بحران جنگ؛ تجربیات شخصی</h3>
               <span class="media-meta">
                 <span data-i18n="insights.watch">مشاهده</span>
-                <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
               </span>
             </div>
           </a>
 
           <div class="insights-side">
-            <a class="media-card media-side" href="https://dorhi.ir/%d8%b1%d9%88%d8%a7%db%8c%d8%aa-%d8%b1%d8%b4%d8%af/" target="_blank" rel="noopener">
+            <a class="media-card media-side" href="https://dorhi.ir/%d8%b1%d9%88%d8%a7%db%8c%d8%aa-%d8%b1%d8%b4%d8%af/"
+              target="_blank" rel="noopener">
               <div class="media-thumb">
-                <img src="media/video-growth.webp" alt="ویدئوی روایت رشد" width="900" height="713" loading="lazy" decoding="async" data-i18n-attr="alt:insights.items.1.alt" />
+                <img src="media/video-growth.webp" alt="ویدئوی روایت رشد" width="900" height="713" loading="lazy"
+                  decoding="async" data-i18n-attr="alt:insights.items.1.alt" />
                 <span class="media-tag" data-i18n="insights.tagVideo">ویدئو</span>
               </div>
               <div class="media-body">
                 <h3 class="media-title" data-i18n="insights.items.1.title">روایت رشد</h3>
                 <span class="media-meta">
                   <span data-i18n="insights.watch">مشاهده</span>
-                  <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
                 </span>
               </div>
             </a>
 
-            <a class="media-card media-side" href="https://dorhi.ir/%da%a9%d9%86%d8%aa%d8%b1%d9%84-%d9%85%d8%b7%d8%a7%d9%84%d8%a8%d8%a7%d8%aa-%d8%b3%d8%aa%d9%88%d9%86-%d9%81%d9%82%d8%b1%d8%a7%d8%aa-%d8%b3%d9%84%d8%a7%d9%85%d8%aa-%d9%85%d8%a7%d9%84%db%8c-%d8%af%d8%b1/" target="_blank" rel="noopener">
+            <a class="media-card media-side"
+              href="https://dorhi.ir/%da%a9%d9%86%d8%aa%d8%b1%d9%84-%d9%85%d8%b7%d8%a7%d9%84%d8%a8%d8%a7%d8%aa-%d8%b3%d8%aa%d9%88%d9%86-%d9%81%d9%82%d8%b1%d8%a7%d8%aa-%d8%b3%d9%84%d8%a7%d9%85%d8%aa-%d9%85%d8%a7%d9%84%db%8c-%d8%af%d8%b1/"
+              target="_blank" rel="noopener">
               <div class="media-thumb">
-                <img src="media/video-receivables.webp" alt="ویدئو درباره کنترل مطالبات و سلامت مالی" width="900" height="687" loading="lazy" decoding="async" data-i18n-attr="alt:insights.items.2.alt" />
+                <img src="media/video-receivables.webp" alt="ویدئو درباره کنترل مطالبات و سلامت مالی" width="900"
+                  height="687" loading="lazy" decoding="async" data-i18n-attr="alt:insights.items.2.alt" />
                 <span class="media-tag" data-i18n="insights.tagVideo">ویدئو</span>
               </div>
               <div class="media-body">
-                <h3 class="media-title" data-i18n="insights.items.2.title">کنترل مطالبات؛ ستون فقرات سلامت مالی در شرکت‌های پخش و توزیع</h3>
+                <h3 class="media-title" data-i18n="insights.items.2.title">کنترل مطالبات؛ ستون فقرات سلامت مالی در
+                  شرکت‌های پخش و توزیع</h3>
                 <span class="media-meta">
                   <span data-i18n="insights.watch">مشاهده</span>
-                  <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
                 </span>
               </div>
             </a>
 
-            <a class="media-card media-side" href="https://dorhi.ir/%d8%b3%d8%b1%d9%85%d8%a7%db%8c%d8%aa%d9%88%d9%86-%d8%b1%d9%88-%d9%86%d8%a7%d8%a8%d9%88%d8%af-%d9%86%da%a9%d9%86%db%8c%d9%86/" target="_blank" rel="noopener">
+            <a class="media-card media-side"
+              href="https://dorhi.ir/%d8%b3%d8%b1%d9%85%d8%a7%db%8c%d8%aa%d9%88%d9%86-%d8%b1%d9%88-%d9%86%d8%a7%d8%a8%d9%88%d8%af-%d9%86%da%a9%d9%86%db%8c%d9%86/"
+              target="_blank" rel="noopener">
               <div class="media-thumb">
-                <img src="media/video-capital.webp" alt="ویدئو درباره حفظ سرمایه کسب‌وکار" width="900" height="759" loading="lazy" decoding="async" data-i18n-attr="alt:insights.items.3.alt" />
+                <img src="media/video-capital.webp" alt="ویدئو درباره حفظ سرمایه کسب‌وکار" width="900" height="759"
+                  loading="lazy" decoding="async" data-i18n-attr="alt:insights.items.3.alt" />
                 <span class="media-tag" data-i18n="insights.tagVideo">ویدئو</span>
               </div>
               <div class="media-body">
                 <h3 class="media-title" data-i18n="insights.items.3.title">سرمایتان را نابود نکنید</h3>
                 <span class="media-meta">
                   <span data-i18n="insights.watch">مشاهده</span>
-                  <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
                 </span>
               </div>
             </a>
 
-            <a class="media-card media-side media-article" href="https://dorhi.ir/change-in-business/" target="_blank" rel="noopener">
+            <a class="media-card media-side media-article" href="https://dorhi.ir/change-in-business/" target="_blank"
+              rel="noopener">
               <div class="media-thumb">
-                <img src="media/article-change.webp" alt="مقاله پیش‌نیازهای تغییر در کسب‌وکار" width="900" height="675" loading="lazy" decoding="async" data-i18n-attr="alt:insights.items.4.alt" />
+                <img src="media/article-change.webp" alt="مقاله پیش‌نیازهای تغییر در کسب‌وکار" width="900" height="675"
+                  loading="lazy" decoding="async" data-i18n-attr="alt:insights.items.4.alt" />
                 <span class="media-tag" data-i18n="insights.tagArticle">مقاله</span>
               </div>
               <div class="media-body">
                 <h3 class="media-title" data-i18n="insights.items.4.title">پیش‌نیازهای تغییر در کسب‌وکار</h3>
-                <p class="media-desc" data-i18n="insights.items.4.desc">یکی از دغدغه‌های اصلی در جلسات با صاحبان سرمایه و بنگاه‌های اقتصادی، بررسی میزان تغییری است که کسب‌وکارها لازم دارند.</p>
+                <p class="media-desc" data-i18n="insights.items.4.desc">یکی از دغدغه‌های اصلی در جلسات با صاحبان سرمایه
+                  و بنگاه‌های اقتصادی، بررسی میزان تغییری است که کسب‌وکارها لازم دارند.</p>
                 <span class="media-meta">
                   <span data-i18n="insights.read">خواندن</span>
-                  <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
                 </span>
               </div>
             </a>
 
-            <a class="media-card media-side media-article" href="https://dorhi.ir/%d8%a8%d9%87%d8%b1%d9%87-%d9%88%d8%b1%db%8c-%d9%88-%d9%85%d9%81%d9%87%d9%88%d9%85-%d8%a2%d9%86-%d8%af%d8%b1-%d9%85%d8%af%db%8c%d8%b1%db%8c%d8%aa/" target="_blank" rel="noopener">
+            <a class="media-card media-side media-article"
+              href="https://dorhi.ir/%d8%a8%d9%87%d8%b1%d9%87-%d9%88%d8%b1%db%8c-%d9%88-%d9%85%d9%81%d9%87%d9%88%d9%85-%d8%a2%d9%86-%d8%af%d8%b1-%d9%85%d8%af%db%8c%d8%b1%db%8c%d8%aa/"
+              target="_blank" rel="noopener">
               <div class="media-thumb">
-                <img src="media/article-productivity.webp" alt="مقاله بهره‌وری و مفهوم آن در مدیریت" width="900" height="675" loading="lazy" decoding="async" data-i18n-attr="alt:insights.items.5.alt" />
+                <img src="media/article-productivity.webp" alt="مقاله بهره‌وری و مفهوم آن در مدیریت" width="900"
+                  height="675" loading="lazy" decoding="async" data-i18n-attr="alt:insights.items.5.alt" />
                 <span class="media-tag" data-i18n="insights.tagArticle">مقاله</span>
               </div>
               <div class="media-body">
                 <h3 class="media-title" data-i18n="insights.items.5.title">بهره‌وری و مفهوم آن در مدیریت</h3>
-                <p class="media-desc" data-i18n="insights.items.5.desc">بهره‌وری سازمانی دیدگاهی فکری است که می‌خواهد وضعیت موجود را به بهترین شکل ممکن بهبود ببخشد.</p>
+                <p class="media-desc" data-i18n="insights.items.5.desc">بهره‌وری سازمانی دیدگاهی فکری است که می‌خواهد
+                  وضعیت موجود را به بهترین شکل ممکن بهبود ببخشد.</p>
                 <span class="media-meta">
                   <span data-i18n="insights.read">خواندن</span>
-                  <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  <svg class="flip-rtl" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
                 </span>
               </div>
             </a>
@@ -580,7 +807,10 @@
         <div class="view-all-row">
           <a class="link-arrow" href="https://dorhi.ir/contents/" target="_blank" rel="noopener">
             <span data-i18n="insights.viewAll">مشاهده همه محتواها</span>
-            <svg class="flip-rtl" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <svg class="flip-rtl" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
           </a>
         </div>
       </div>
@@ -591,17 +821,24 @@
       <div class="container-x">
         <div class="section-head">
           <p class="section-index" data-i18n="contact.index">۰۶ — تماس و مشاوره</p>
-          <h2 class="section-title" id="contact-title" data-i18n="contact.title">برای ساختن مسیر رشد، گفتگو را آغاز کنیم.</h2>
+          <h2 class="section-title" id="contact-title" data-i18n="contact.title">برای ساختن مسیر رشد، گفتگو را آغاز
+            کنیم.</h2>
         </div>
 
         <div class="contact-grid">
           <div class="contact-info">
-            <p class="section-sub" style="margin-top:0" data-i18n="contact.desc">اگر به دنبال ساختارمند کردن کسب‌وکار و بهبود عملکرد سازمان هستید، از یک گفتگو آغاز کنید. جلسات مشاوره به‌صورت حضوری در مشهد و آنلاین برگزار می‌شود.</p>
+            <p class="section-sub" style="margin-top:0" data-i18n="contact.desc">اگر به دنبال ساختارمند کردن کسب‌وکار و
+              بهبود عملکرد سازمان هستید، از یک گفتگو آغاز کنید. جلسات مشاوره به‌صورت حضوری در مشهد و آنلاین برگزار
+              می‌شود.</p>
 
             <div class="contact-rows">
               <div class="info-row">
                 <span class="info-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.8.7a2 2 0 0 1 1.7 2z" />
+                  </svg>
                 </span>
                 <div>
                   <p class="info-label" data-i18n="contact.phoneLabel">تلفن</p>
@@ -611,7 +848,11 @@
 
               <div class="info-row">
                 <span class="info-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="m22 7-10 6L2 7" />
+                  </svg>
                 </span>
                 <div>
                   <p class="info-label" data-i18n="contact.emailLabel">ایمیل</p>
@@ -621,7 +862,11 @@
 
               <div class="info-row">
                 <span class="info-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
                 </span>
                 <div>
                   <p class="info-label" data-i18n="contact.locLabel">دفتر و جلسات حضوری</p>
@@ -631,11 +876,17 @@
 
               <div class="info-row">
                 <span class="info-icon" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                    <circle cx="12" cy="12" r="4.5" />
+                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                  </svg>
                 </span>
                 <div>
                   <p class="info-label" data-i18n="contact.igLabel">اینستاگرام</p>
-                  <a class="info-value" href="https://www.instagram.com/alidorhi.ir" target="_blank" rel="noopener" dir="ltr">@alidorhi.ir</a>
+                  <a class="info-value" href="https://www.instagram.com/alidorhi.ir" target="_blank" rel="noopener"
+                    dir="ltr">@alidorhi.ir</a>
                 </div>
               </div>
             </div>
@@ -647,14 +898,23 @@
 
             <div class="session-rows">
               <div class="session-row">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
                 <div>
                   <p class="s-title" data-i18n="contact.inPersonTitle">جلسه حضوری</p>
                   <p class="s-sub" data-i18n="contact.inPersonSub">در مشهد برگزار می‌شود</p>
                 </div>
               </div>
               <div class="session-row">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m22 8-6 4 6 4V8z" />
+                  <rect x="2" y="6" width="14" height="12" rx="2" />
+                </svg>
                 <div>
                   <p class="s-title" data-i18n="contact.onlineTitle">جلسه آنلاین</p>
                   <p class="s-sub" data-i18n="contact.onlineSub">از هرجا که هستید</p>
@@ -662,18 +922,27 @@
               </div>
             </div>
 
-            <a class="btn btn-primary consult-cta" href="https://dorhi.ir/counseling/" target="_blank" rel="noopener" data-i18n="contact.cta">رزرو از صفحه مشاوره</a>
+            <a class="btn btn-primary consult-cta" href="https://dorhi.ir/counseling/" target="_blank" rel="noopener"
+              data-i18n="contact.cta">رزرو از صفحه مشاوره</a>
 
             <div class="other-paths">
               <p class="other-label" data-i18n="contact.otherLabel">مسیرهای دیگر</p>
               <div class="path-list">
                 <a class="path-link" href="https://dorhi.ir/specialized_academy/" target="_blank" rel="noopener">
-                  <span><span data-i18n="contact.academyTitle">آکادمی تخصصی</span><br /><span class="pl-sub" data-i18n="contact.academySub">دوره‌های آموزشی کسب‌وکار</span></span>
-                  <svg class="flip-rtl" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  <span><span data-i18n="contact.academyTitle">آکادمی تخصصی</span><br /><span class="pl-sub"
+                      data-i18n="contact.academySub">دوره‌های آموزشی کسب‌وکار</span></span>
+                  <svg class="flip-rtl" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
                 </a>
                 <a class="path-link" href="https://dorhi.ir/shop/" target="_blank" rel="noopener">
-                  <span><span data-i18n="contact.toolboxTitle">جعبه ابزار رشد</span><br /><span class="pl-sub" data-i18n="contact.toolboxSub">محصولات و ابزارهای عملی</span></span>
-                  <svg class="flip-rtl" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  <span><span data-i18n="contact.toolboxTitle">جعبه ابزار رشد</span><br /><span class="pl-sub"
+                      data-i18n="contact.toolboxSub">محصولات و ابزارهای عملی</span></span>
+                  <svg class="flip-rtl" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -704,12 +973,20 @@
         </nav>
 
         <div class="footer-social">
-          <a class="social-btn" href="https://www.instagram.com/alidorhi.ir" target="_blank" rel="noopener" data-i18n-attr="aria-label:footer.instagram" aria-label="اینستاگرام">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <a class="social-btn" href="https://www.instagram.com/alidorhi.ir" target="_blank" rel="noopener"
+            data-i18n-attr="aria-label:footer.instagram" aria-label="اینستاگرام">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4.5" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
           </a>
           <div class="lang-switch lang-switch--footer">
-            <button class="lang-btn" type="button" data-lang="fa" aria-pressed="true" data-i18n-attr="aria-label:a11y.langFa" aria-label="فارسی">فا</button>
-            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" data-i18n-attr="aria-label:a11y.langEn" aria-label="انگلیسی">EN</button>
+            <button class="lang-btn" type="button" data-lang="fa" aria-pressed="true"
+              data-i18n-attr="aria-label:a11y.langFa" aria-label="فارسی">فا</button>
+            <button class="lang-btn" type="button" data-lang="en" aria-pressed="false"
+              data-i18n-attr="aria-label:a11y.langEn" aria-label="انگلیسی">EN</button>
           </div>
         </div>
       </div>
@@ -723,4 +1000,5 @@
 
   <script type="module" src="/src/js/main.js"></script>
 </body>
+
 </html>
