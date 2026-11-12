@@ -877,6 +877,46 @@ html[lang="en"] .phase-year { text-transform: uppercase; }
 }
 .logo-cell:hover img { filter: grayscale(0); opacity: 1; }
 
+/* Mobile marquee — grid becomes a single auto-scrolling row */
+@media (max-width: 639.98px) {
+  .logo-grid {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+  .logo-grid > li {
+    flex: 0 0 auto;
+    width: 44vw;
+    min-height: 72px;
+    padding: 0.8rem 1rem;
+  }
+  .logo-grid > li img { max-height: 40px; }
+
+  [dir='ltr'] .logo-grid {
+    animation: logo-marquee-ltr 28s linear infinite;
+  }
+  [dir='rtl'] .logo-grid {
+    animation: logo-marquee-rtl 28s linear infinite;
+  }
+  .logo-grid.operational { animation-duration: 22s; }
+}
+@keyframes logo-marquee-ltr {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes logo-marquee-rtl {
+  from { transform: translateX(0); }
+  to   { transform: translateX(50%); }
+}
+@media (min-width: 640px) {
+  .logo-grid > li.is-clone { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-grid { animation: none !important; }
+}
+
 .collab-note {
   margin-top: 2.5rem;
   font-size: 0.82rem;

@@ -8,6 +8,7 @@ import { language } from './language.js';
 import { Navigation } from './navigation.js';
 import { Motion } from './animations.js';
 import { Preloader } from './preloader.js';
+import { LogoMarquee } from './marquee.js';
 
 const boot = async () => {
   // 1) Language first (may switch document to en before animations start)
@@ -22,7 +23,11 @@ const boot = async () => {
     btn.addEventListener('click', () => language.switchTo(btn.dataset.lang));
   });
 
-  // 4) Motion system
+  // 4) Mobile logo marquee (clones cells once, hidden on desktop)
+  const marquee = new LogoMarquee();
+  marquee.init();
+
+  // 5) Motion system
   const motion = new Motion();
 
   // After every language switch: recalibrate scroll triggers
@@ -30,7 +35,7 @@ const boot = async () => {
     requestAnimationFrame(() => motion.refresh());
   });
 
-  // 5) Preloader → hero entrance
+  // 6) Preloader → hero entrance
   const preloader = new Preloader();
   await preloader.run();
 
