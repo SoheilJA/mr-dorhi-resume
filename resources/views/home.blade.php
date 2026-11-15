@@ -1,0 +1,10 @@
+  @extends('layouts.app')
+  @section('content')
+      @include('sections.hero')
+      @include('sections.about ')
+      @include('sections.expertise')
+      @include('sections.journey')
+      @include('sections.collaborations ')
+      @include('sections.insights')
+      @include('sections.contact ')
+  @endsection
