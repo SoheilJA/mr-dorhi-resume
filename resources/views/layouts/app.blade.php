@@ -1,46 +1,44 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
-
+<html lang="{{ app()->getLocale() }}" dir="{{ app()->getLocale() === 'fa' ? 'rtl' : 'ltr' }}">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- ================= SEO ================= -->
     <title>علی درحی | مشاور و مدرس کسب‌وکار — مدیرعامل چابک‌سازان آرکا</title>
     <meta name="description"
-        content="وب‌سایت رسمی علی درحی؛ مشاور و مدرس کسب‌وکار و مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکا. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت." />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Ali Dorhi" />
-    <link rel="canonical" href="https://dorhi.ir/" />
-    <link rel="alternate" hreflang="fa" href="https://dorhi.ir/" />
-    <link rel="alternate" hreflang="en" href="https://dorhi.ir/?lang=en" />
-    <link rel="alternate" hreflang="x-default" href="https://dorhi.ir/" />
-    <meta name="theme-color" content="#F8F8F6" />
+          content="وب‌سایت رسمی علی درحی؛ مشاور و مدرس کسب‌وکار و مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکا. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت."/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="Ali Dorhi"/>
+    <link rel="canonical" href="{{ route('home', ['locale' => app()->getLocale()]) }}" />
+    <link rel="alternate" hreflang="fa" href="{{ route('home', ['locale' => 'fa']) }}" />
+    <link rel="alternate" hreflang="en" href="{{ route('home', ['locale' => 'en']) }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ route('home', ['locale' => 'en']) }}" />    <meta name="theme-color" content="#F8F8F6"/>
 
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Ali Dorhi | علی درحی" />
-    <meta property="og:title" content="علی درحی | مشاور و مدرس کسب‌وکار — مدیرعامل چابک‌سازان آرکا" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="Ali Dorhi | علی درحی"/>
+    <meta property="og:title" content="علی درحی | مشاور و مدرس کسب‌وکار — مدیرعامل چابک‌سازان آرکا"/>
     <meta property="og:description"
-        content="ساختار درست، مسیر رشد پایدار کسب‌وکار است. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت." />
-    <meta property="og:url" content="https://dorhi.ir/" />
-    <meta property="og:image" content="https://dorhi.ir/images/portrait.jpg" />
-    <meta property="og:locale" content="fa_IR" />
-    <meta property="og:locale:alternate" content="en_US" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="علی درحی | مشاور و مدرس کسب‌وکار" />
-    <meta name="twitter:description" content="ساختار درست، مسیر رشد پایدار کسب‌وکار است." />
-    <meta name="twitter:image" content="https://dorhi.ir/images/portrait.jpg" />
+          content="ساختار درست، مسیر رشد پایدار کسب‌وکار است. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت."/>
+    <meta property="og:url" content="https://dorhi.ir/"/>
+    <meta property="og:image" content="https://dorhi.ir/images/portrait.jpg"/>
+    <meta property="og:locale" content="fa_IR"/>
+    <meta property="og:locale:alternate" content="en_US"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="علی درحی | مشاور و مدرس کسب‌وکار"/>
+    <meta name="twitter:description" content="ساختار درست، مسیر رشد پایدار کسب‌وکار است."/>
+    <meta name="twitter:image" content="https://dorhi.ir/images/portrait.jpg"/>
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/icon-192.png" />
-    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/icon-192.png"/>
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png"/>
 
     <!-- Fonts (self-hosted, document-relative URLs) -->
-    <link rel="preload" href="/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/Inter-Latin-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin/>
+    <link rel="preload" href="/fonts/Inter-Latin-Variable.woff2" as="font" type="font/woff2" crossorigin/>
     @verbatim
         <style>
             @font-face {
@@ -62,7 +60,7 @@
     @endverbatim
 
     <!-- Hero portrait: first real image above the fold -->
-    <link rel="preload" as="image" href="/images/portrait.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/images/portrait.webp" fetchpriority="high"/>
 
     @vite(['resources/css/app.css', 'resources/js/main.js'])
     <!-- Critical preloader styles (rest loads via bundle) -->
@@ -131,7 +129,7 @@
                 text-transform: uppercase
             }
 
-            @media (prefers-reduced-motion:reduce) {
+            @media (prefers-reduced-motion: reduce) {
                 #preloader {
                     transition: none
                 }
@@ -148,23 +146,11 @@
         @endverbatim
     </noscript>
 
-    <!-- Restore language direction before first paint -->
-    <script>
-        (function() {
-            try {
-                if (localStorage.getItem('dorhi-lang') === 'en') {
-                    document.documentElement.lang = 'en';
-                    document.documentElement.dir = 'ltr';
-                }
-            } catch (e) {}
-        })();
-    </script>
-
     <!-- Structured data: Person -->
     @verbatim
         <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
+            {
+              "@context": "https://schema.org",
     "@type": "Person",
     "name": "علی درحی",
     "alternateName": "Ali Dorhi",
@@ -196,31 +182,31 @@
       "Systems Thinking"
     ]
   }
-  </script>
+        </script>
     @endverbatim
 </head>
 
 <body>
-    <a class="skip-link" href="#main" data-i18n="a11y.skip">پرش به محتوای اصلی</a>
+<a class="skip-link" href="#main" data-i18n="a11y.skip">پرش به محتوای اصلی</a>
 
-    <!-- ================= Preloader ================= -->
-    <div id="preloader" aria-hidden="true">
-        <div class="preloader-mark"><span data-i18n="preloader.mark">علی درحی</span><i>.</i></div>
-        <div class="preloader-line">
-            <div class="preloader-fill"></div>
-        </div>
-        <div class="preloader-caption" data-i18n="preloader.caption">dorhi.ir</div>
+<!-- ================= Preloader ================= -->
+<div id="preloader" aria-hidden="true">
+    <div class="preloader-mark"><span data-i18n="preloader.mark">علی درحی</span><i>.</i></div>
+    <div class="preloader-line">
+        <div class="preloader-fill"></div>
     </div>
+    <div class="preloader-caption" data-i18n="preloader.caption">dorhi.ir</div>
+</div>
 
-    @include('partials.header')
+@include('partials.header')
 
-    <main id="main">
+<main id="main">
 
-        @yield('content')
+    @yield('content')
 
-    </main>
+</main>
 
-    @include('partials.footer')
+@include('partials.footer')
 
 </body>
 

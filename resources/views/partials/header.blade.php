@@ -17,10 +17,7 @@
                 <div class="header-actions">
                     <div class="lang-switch" role="group" data-i18n-attr="aria-label:a11y.langSwitch"
                         aria-label="انتخاب زبان">
-                        <button class="lang-btn" type="button" data-lang="fa" aria-pressed="true"
-                            data-i18n-attr="aria-label:a11y.langFa" aria-label="فارسی">فا</button>
-                        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false"
-                            data-i18n-attr="aria-label:a11y.langEn" aria-label="انگلیسی">EN</button>
+                        @include('partials.lang-switch')
                     </div>
                     <a class="btn btn-primary header-cta" href="https://dorhi.ir/counseling/" target="_blank"
                         rel="noopener" data-i18n="nav.cta">رزرو مشاوره</a>
