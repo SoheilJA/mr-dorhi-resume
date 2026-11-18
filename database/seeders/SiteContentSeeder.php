@@ -82,5 +82,107 @@ class SiteContentSeeder extends Seeder
                 'en' => 'Frames of collaboration — moments alongside teams and businesses',
             ],
         ]]);
+
+        SiteSetting::firstOrCreate(['group' => 'expertise'], ['data' => [
+            'index_label' => ['fa' => 'تخصص‌ها', 'en' => 'Expertise'],
+            'title' => ['fa' => 'حوزه‌هایی که تجربه در آن‌ها به نتیجه می‌رسد.', 'en' => 'Where experience turns into results.'],
+            'sub' => [
+                'fa' => 'تمرکز بر آنچه در جلسات واقعی کسب‌وکار، بارها آزموده و اجرایی شده است.',
+                'en' => 'A focus on what has been tested and executed, repeatedly, in real business settings.',
+            ],
+            'items' => [
+                [
+                    'icon' => 'structure',
+                    'title' => ['fa' => 'توسعه ساختاری سازمان', 'en' => 'Organizational Development'],
+                    'desc' => [
+                        'fa' => 'طراحی و استقرار ساختارهایی که سازمان را برای رشد پایدار آماده می‌کند؛ از شفاف‌سازی نقش‌ها تا فرایندهای درست.',
+                        'en' => 'Designing and establishing structures that prepare an organization for sustainable growth — from clear roles to sound processes.',
+                    ],
+                ],
+                [
+                    'icon' => 'growth',
+                    'title' => ['fa' => 'بازاریابی و استراتژی فروش', 'en' => 'Marketing & Sales Strategy'],
+                    'desc' => [
+                        'fa' => 'تدوین مسیرهای عملی بازاریابی و فروش، بر پایه تجربه واقعی بازار — نه نسخه‌های تکراری.',
+                        'en' => 'Practical marketing and sales pathways grounded in real market experience — not recycled formulas.',
+                    ],
+                ],
+                [
+                    'icon' => 'compass',
+                    'title' => ['fa' => 'مدیریت کسب‌وکار', 'en' => 'Business Management'],
+                    'desc' => [
+                        'fa' => 'همراهی مدیران در تصمیم‌ها و چالش‌های اداره کسب‌وکار؛ از نگاه سیستمی تا نتیجه‌گرایی صحیح.',
+                        'en' => 'Supporting executives through the decisions and challenges of running a business — from systems thinking to proper result orientation.',
+                    ],
+                ],
+                [
+                    'icon' => 'speed',
+                    'title' => ['fa' => 'افزایش بهره‌وری', 'en' => 'Productivity Improvement'],
+                    'desc' => [
+                        'fa' => 'بهبود عملکرد سازمان با نگاه دقیق به فرایندها، منابع و انگیزهٔ انسانی.',
+                        'en' => 'Enhancing organizational performance through a close look at processes, resources, and human motivation.',
+                    ],
+                ],
+                [
+                    'icon' => 'network',
+                    'title' => ['fa' => 'تفکر سیستمی', 'en' => 'Systems Thinking'],
+                    'desc' => [
+                        'fa' => 'نگاه کل‌نگر به سازمان برای یافتن ریشه‌ها، نه صرفاً نشانه‌ها.',
+                        'en' => 'A holistic view of the organization that finds root causes — not just symptoms.',
+                    ],
+                ],
+                [
+                    'icon' => 'target',
+                    'title' => ['fa' => 'اجرا و عملیاتی‌سازی اهداف', 'en' => 'Operational Execution'],
+                    'desc' => [
+                        'fa' => 'تبدیل اهداف کلان به برنامه‌های اجرایی قابل پیگیری و نتیجه‌محور.',
+                        'en' => 'Turning ambitious goals into executable, trackable, result-driven plans.',
+                    ],
+                ],
+            ],
+        ]]);
+
+        SiteSetting::firstOrCreate(['group' => 'journey'], ['data' => [
+            'index_label' => ['fa' => 'مسیر حرفه‌ای', 'en' => 'Journey'],
+            'title' => ['fa' => 'از دل صنعت، تا مشاورهٔ کسب‌وکارها.', 'en' => 'From the heart of industry to business consulting.'],
+            'sub' => [
+                'fa' => 'مسیری که با تجربه ساخته شده است؛ بدون شتابزدگی و با تکیه بر عمل.',
+                'en' => 'A path built on experience — unhurried, grounded in practice.',
+            ],
+            'phases' => [
+                [
+                    'tag' => ['fa' => 'دو دهه تجربه', 'en' => 'Two Decades'],
+                    'title' => ['fa' => 'در دل صنعت', 'en' => 'Inside Industry'],
+                    'desc' => [
+                        'fa' => 'فعالیت اجرایی و عملیاتی در حوزه صنعت و همکاری با برندهای مطرح ملی و بین‌المللی؛ دوره‌ای که بستر اصلی دانش امروز اوست.',
+                        'en' => 'Executive and operational roles across the industrial sector, collaborating with leading national and international brands — the foundation of his expertise today.',
+                    ],
+                ],
+                [
+                    'tag' => ['fa' => '۱۳۹۸', 'en' => '2019'],
+                    'title' => ['fa' => 'آغاز رسمی مشاوره و آموزش', 'en' => 'Official Start of Consulting & Training'],
+                    'desc' => [
+                        'fa' => 'شروع رسمی فعالیت مشاوره و آموزش در بازاریابی، فروش و مدیریت، و در اختیار گذاشتن تجربه‌ها به کسب‌وکارها.',
+                        'en' => 'Formally began consulting and training in marketing, sales, and management — putting his experience at the service of businesses.',
+                    ],
+                ],
+                [
+                    'tag' => ['fa' => 'رسالت', 'en' => 'The Mission'],
+                    'title' => ['fa' => 'همراهی کسب‌وکارهای ایران', 'en' => 'Alongside Iranian Businesses'],
+                    'desc' => [
+                        'fa' => 'کمک به کسب‌وکارها برای ایجاد ساختار صحیح و ارتقای سازمانی؛ مسیری که امروز نیز با همان دقت ادامه دارد.',
+                        'en' => 'Helping businesses build sound structures and advance organizationally — a path he continues with the same care today.',
+                    ],
+                ],
+                [
+                    'tag' => ['fa' => 'امروز', 'en' => 'Today'],
+                    'title' => ['fa' => 'چابک‌سازان آرکا', 'en' => 'Chabok Sazan Arka'],
+                    'desc' => [
+                        'fa' => 'مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکا؛ مشاوره، آموزش و توسعه سازمانی در کنار مجموعه‌هایی که به رشد رسیده‌اند.',
+                        'en' => 'CEO of the organizational consulting company Chabok Sazan Arka — consulting, training, and organizational development alongside businesses that have grown.',
+                    ],
+                ],
+            ],
+        ]]);
     }
 }
