@@ -9,7 +9,7 @@ class SiteContentSeeder extends Seeder
 {
     public function run(): void
     {
-        SiteSetting::updateOrCreate(['group' => 'hero'], ['data' => [
+        SiteSetting::firstOrCreate(['group' => 'hero'], ['data' => [
             'eyebrow' => [
                 'fa' => 'مشاور و مدرس کسب‌وکار · مدیرعامل چابک‌سازان آرکا',
                 'en' => 'Business Consultant & Trainer · CEO, Chabok Sazan Arka',
@@ -37,6 +37,50 @@ class SiteContentSeeder extends Seeder
                 'en' => 'Ali Dorhi — Organizational Consultant & CEO of Chabok Sazan Arka',
             ],
             'scroll' => ['fa' => 'اسکرول کنید', 'en' => 'Scroll'],
+        ]]);
+
+        SiteSetting::firstOrCreate(['group' => 'about'], ['data' => [
+            'index_label' => ['fa' => 'درباره', 'en' => 'About'],
+            'title' => [
+                'fa' => 'تجربه‌ای که به ساختن مسیرهای بهتر می‌انجامد.',
+                'en' => 'Experience that builds better paths.',
+            ],
+            'lead' => [
+                'fa' => 'علی درحی مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکاست؛ جایی که تجربه سال‌ها مدیریت اجرایی در صنعت، امروز در خدمت رشد کسب‌وکارهاست.',
+                'en' => 'Ali Dorhi is CEO of Chabok Sazan Arka, an organizational consulting company where years of industrial executive experience now serve the growth of businesses.',
+            ],
+            'p2' => [
+                'fa' => 'او حدود دو دهه در سمت‌های اجرایی و عملیاتی صنعت فعالیت کرده و با برندهای مطرح ملی و بین‌المللی همکاری داشته است. از سال ۱۳۹۸، فعالیت رسمی خود را در حوزه مشاوره و آموزش — بازاریابی، فروش و مدیریت — آغاز کرده و تجربه‌اش را در اختیار کسب‌وکارهای متعددی قرار داده است.',
+                'en' => 'He has spent some two decades in executive and operational roles across industry, collaborating with leading national and international brands. In 2019 he formally began consulting and training in marketing, sales, and management — and has since shared that experience with numerous businesses.',
+            ],
+            'p3' => [
+                'fa' => 'رسالت او، کمک و همراهی کسب‌وکارهای ایران در ایجاد ساختار صحیح و ارتقای عملکرد سازمانی است؛ با رویکردی که خودش سه اصل آن را چنین توصیف می‌کند:',
+                'en' => 'His mission is to help Iranian businesses build sound structures and elevate organizational performance, with an approach he describes in three principles:',
+            ],
+            'stat_number' => 20,
+            'stat_suffix' => '+',
+            'stat_label' => [
+                'fa' => 'سال تجربه اجرایی و عملیاتی در حوزه صنعت',
+                'en' => 'Years of Executive & Operational Experience in Industry',
+            ],
+            'principles' => [
+                [
+                    'title' => ['fa' => 'ساده، اما عملگرا', 'en' => 'Simple, yet practical'],
+                    'desc' => ['fa' => 'آنچه می‌آموزد و می‌آموزاند، علمی و تجربه‌شده است.', 'en' => 'What he learns and teaches is scientific and proven in the field.'],
+                ],
+                [
+                    'title' => ['fa' => 'ساده، اما رشدآفرین', 'en' => 'Simple, yet growth-creating'],
+                    'desc' => ['fa' => 'کسب‌وکارهای متعددی با آموزش‌های او به رشد رسیده‌اند.', 'en' => 'Numerous businesses have grown through his training.'],
+                ],
+                [
+                    'title' => ['fa' => 'ساده، اما ساختاریافته', 'en' => 'Simple, yet structured'],
+                    'desc' => ['fa' => 'آموزش‌های او در جهت ساختار صحیح و ارتقای سازمانی است.', 'en' => 'His teaching is aimed at sound structure and organizational advancement.'],
+                ],
+            ],
+            'strip_caption' => [
+                'fa' => 'قاب همراهی — ثبت لحظاتی چند، در کنار مجموعه‌ها',
+                'en' => 'Frames of collaboration — moments alongside teams and businesses',
+            ],
         ]]);
     }
 }

@@ -45,4 +45,19 @@ class Site
 
         return (string)$text;
     }
+
+    /** اعداد را برای صفحه‌ی فارسی به رقم فارسی تبدیل می‌کند */
+    public static function number(string|int $value): string
+    {
+        $value = (string)$value;
+
+        if (app()->getLocale() !== 'fa') {
+            return $value;
+        }
+
+        return strtr($value, [
+            '0' => '۰', '1' => '۱', '2' => '۲', '3' => '۳', '4' => '۴',
+            '5' => '۵', '6' => '۶', '7' => '۷', '8' => '۸', '9' => '۹',
+        ]);
+    }
 }
