@@ -61,8 +61,7 @@
     @endverbatim
 
     <!-- Hero portrait: first real image above the fold -->
-    <link rel="preload" as="image" href="/images/portrait.webp" fetchpriority="high"/>
-
+    <link rel="preload" as="image" href="{{ \App\Support\Site::image('hero.portrait', '/images/portrait.webp') }}" fetchpriority="high" />
     @vite(['resources/css/app.css', 'resources/js/main.js'])
     <!-- Critical preloader styles (rest loads via bundle) -->
     @verbatim

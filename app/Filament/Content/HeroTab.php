@@ -5,6 +5,7 @@ namespace App\Filament\Content;
 use App\Support\Bilingual;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Support\Icons\Heroicon;
+use App\Support\ImageUpload;
 
 class HeroTab
 {
@@ -13,6 +14,7 @@ class HeroTab
         return Tab::make('صفحه اول')
             ->icon(Heroicon::OutlinedHome)
             ->schema([
+                ImageUpload::make('hero.portrait', 'عکس پرتره (نسبت ۴ به ۵ پیشنهاد می‌شود)', 'hero', 880, 1108),
                 Bilingual::text('hero.eyebrow', 'عنوان کوچک بالای تیتر'),
                 Bilingual::text('hero.title_line1', 'تیتر، خط ۱'),
                 Bilingual::text('hero.title_line2_pre', 'تیتر، خط ۲ (بخش عادی)'),

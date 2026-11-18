@@ -47,7 +47,7 @@
             <div class="hero-visual">
                 <figure class="portrait-card">
                     <div class="portrait-frame" aria-hidden="true"></div>
-                    <img src="/images/portrait.webp"
+                    <img src="{{ Site::image('hero.portrait', '/images/portrait.webp') }}"
                          alt="{{ Site::text('hero.portrait_alt') }}"
                          width="880"
                          height="1108"

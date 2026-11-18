@@ -4,6 +4,7 @@ namespace App\Support;
 
 use App\Models\SiteSetting;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Storage;
 
 class Site
 {
@@ -59,5 +60,17 @@ class Site
             '0' => '۰', '1' => '۱', '2' => '۲', '3' => '۳', '4' => '۴',
             '5' => '۵', '6' => '۶', '7' => '۷', '8' => '۸', '9' => '۹',
         ]);
+    }
+
+    /** آدرس تصویر آپلودشده؛ اگر نبود، تصویر پیش‌فرض */
+    public static function image(string $key, string $fallback): string
+    {
+        $path = self::get($key);
+
+        if (is_array($path)) {
+            $path = reset($path) ?: null;
+        }
+
+        return $path ? Storage::disk('uploads')->url($path) : $fallback;
     }
 }
