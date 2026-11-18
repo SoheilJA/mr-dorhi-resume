@@ -10,10 +10,11 @@
           content="وب‌سایت رسمی علی درحی؛ مشاور و مدرس کسب‌وکار و مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکا. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت."/>
     <meta name="robots" content="index, follow"/>
     <meta name="author" content="Ali Dorhi"/>
-    <link rel="canonical" href="{{ route('home', ['locale' => app()->getLocale()]) }}" />
-    <link rel="alternate" hreflang="fa" href="{{ route('home', ['locale' => 'fa']) }}" />
-    <link rel="alternate" hreflang="en" href="{{ route('home', ['locale' => 'en']) }}" />
-    <link rel="alternate" hreflang="x-default" href="{{ route('home', ['locale' => 'en']) }}" />    <meta name="theme-color" content="#F8F8F6"/>
+    <link rel="canonical" href="{{ route('home', ['locale' => app()->getLocale()]) }}"/>
+    <link rel="alternate" hreflang="fa" href="{{ route('home', ['locale' => 'fa']) }}"/>
+    <link rel="alternate" hreflang="en" href="{{ route('home', ['locale' => 'en']) }}"/>
+    <link rel="alternate" hreflang="x-default" href="{{ route('home', ['locale' => 'en']) }}"/>
+    <meta name="theme-color" content="#F8F8F6"/>
 
     <!-- Open Graph -->
     <meta property="og:type" content="website"/>
@@ -187,15 +188,16 @@
 </head>
 
 <body>
-<a class="skip-link" href="#main" data-i18n="a11y.skip">پرش به محتوای اصلی</a>
-
+<a class="skip-link" href="#main">{{ __('site.skip') }}</a>
 <!-- ================= Preloader ================= -->
 <div id="preloader" aria-hidden="true">
-    <div class="preloader-mark"><span data-i18n="preloader.mark">علی درحی</span><i>.</i></div>
+    <div class="preloader-mark">
+        <span>{{ \App\Support\Site::text('general.brand_name') }}</span>
+        <i>.</i></div>
     <div class="preloader-line">
         <div class="preloader-fill"></div>
     </div>
-    <div class="preloader-caption" data-i18n="preloader.caption">dorhi.ir</div>
+    <div class="preloader-caption">dorhi.ir</div>
 </div>
 
 @include('partials.header')

@@ -184,5 +184,45 @@ class SiteContentSeeder extends Seeder
                 ],
             ],
         ]]);
+
+        SiteSetting::firstOrCreate(['group' => 'general'], ['data' => [
+            'brand_name' => ['fa' => 'علی درحی', 'en' => 'Ali Dorhi'],
+            'nav_about' => ['fa' => 'درباره', 'en' => 'About'],
+            'nav_expertise' => ['fa' => 'تخصص‌ها', 'en' => 'Expertise'],
+            'nav_journey' => ['fa' => 'مسیر حرفه‌ای', 'en' => 'Journey'],
+            'nav_collab' => ['fa' => 'همراهان', 'en' => 'Collaborations'],
+            'nav_insights' => ['fa' => 'دیدگاه‌ها', 'en' => 'Insights'],
+            'nav_contact' => ['fa' => 'تماس', 'en' => 'Contact'],
+            'nav_cta' => ['fa' => 'رزرو مشاوره', 'en' => 'Book a Consultation'],
+            'booking_url' => 'https://dorhi.ir/counseling/',
+            'phone' => '+98 939 538 9820',
+            'email' => 'ali.dorhi@gmail.com',
+            'instagram' => 'alidorhi.ir',
+            'footer_role' => [
+                'fa' => 'مشاور و مدرس کسب‌وکار · مدیرعامل چابک‌سازان آرکا',
+                'en' => 'Business Consultant & Trainer · CEO, Chabok Sazan Arka',
+            ],
+            'footer_copyright' => [
+                'fa' => 'کلیه حقوق این وب‌سایت محفوظ و متعلق به مجموعه چابک‌سازان آرکا است.',
+                'en' => 'All rights reserved — Chabok Sazan Arka Group.',
+            ],
+        ]]);
+
+        SiteSetting::firstOrCreate(['group' => 'contact'], ['data' => [
+            'index_label' => ['fa' => 'تماس و مشاوره', 'en' => 'Contact & Consultation'],
+            'title' => [
+                'fa' => 'برای ساختن مسیر رشد، گفتگو را آغاز کنیم.',
+                'en' => "Let's start a conversation about sustainable growth.",
+            ],
+            'desc' => [
+                'fa' => 'اگر به دنبال ساختارمند کردن کسب‌وکار و بهبود عملکرد سازمان هستید، از یک گفتگو آغاز کنید. جلسات مشاوره به‌صورت حضوری در مشهد و آنلاین برگزار می‌شود.',
+                'en' => 'If you are looking to bring structure to your business and improve organizational performance, it begins with a conversation. Consultation sessions are held in person in Mashhad and online.',
+            ],
+            'phone_label' => ['fa' => 'تلفن', 'en' => 'Phone'],
+            'email_label' => ['fa' => 'ایمیل', 'en' => 'Email'],
+            'loc_label' => ['fa' => 'دفتر و جلسات حضوری', 'en' => 'Office & In-person Sessions'],
+            'loc_value' => ['fa' => 'مشهد، خراسان رضوی', 'en' => 'Mashhad, Khorasan Razavi'],
+            'ig_label' => ['fa' => 'اینستاگرام', 'en' => 'Instagram'],
+        ]]);
     }
 }

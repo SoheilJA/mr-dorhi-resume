@@ -6,6 +6,8 @@ use App\Filament\Content\HeroTab;
 use App\Filament\Content\AboutTab;
 use App\Filament\Content\ExpertiseTab;
 use App\Filament\Content\JourneyTab;
+use App\Filament\Content\ContactTab;
+use App\Filament\Content\GeneralTab;
 use App\Models\SiteSetting;
 use BackedEnum;
 use Filament\Actions\Action;
@@ -33,7 +35,7 @@ class ManageContent extends Page
     protected static ?int $navigationSort = 1;
 
     /** بخش‌هایی که در این صفحه ذخیره می‌شوند */
-    private const GROUPS = ['hero', 'about', 'expertise', 'journey'];
+    private const GROUPS = ['hero', 'about', 'expertise', 'journey', 'contact', 'general'];
 
     public ?array $data = [];
 
@@ -59,6 +61,9 @@ class ManageContent extends Page
                             AboutTab::make(),
                             ExpertiseTab::make(),
                             JourneyTab::make(),
+                            ContactTab::make(),
+                            GeneralTab::make(),
+
                         ])
                         ->persistTabInQueryString(),
                 ])

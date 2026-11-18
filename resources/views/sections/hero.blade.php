@@ -20,7 +20,7 @@
                 <p class="hero-desc">{{ Site::text('hero.desc') }}</p>
 
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="https://dorhi.ir/counseling/" target="_blank"
+                    <a class="btn btn-primary" href=" {{ Site::get("general.booking_url") }} " target="_blank"
                        rel="noopener">{{ Site::text('hero.cta_primary') }}</a>
                     <a class="link-arrow" href="#journey">
                         <span>{{ Site::text('hero.cta_secondary') }}</span>

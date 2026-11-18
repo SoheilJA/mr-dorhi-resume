@@ -1,60 +1,46 @@
-    <!-- ================= Header ================= -->
-    <header id="site-header">
-        <div class="container-x">
-            <div class="header-inner">
-                <a class="brand" href="#hero" data-i18n-attr="aria-label:nav.home" aria-label="علی درحی — صفحه نخست">
-                    <span data-i18n="brand.name">علی درحی</span><span class="brand-dot">.</span>
-                </a>
+@use('App\Support\Site')
+<header id="site-header">
+    <div class="container-x">
+        <div class="header-inner">
+            <a class="brand" href="#hero" aria-label="{{ __('site.home_aria', ['name' => Site::text('general.brand_name')]) }}">
+                <span>{{ Site::text('general.brand_name') }}</span><span class="brand-dot">.</span>
+            </a>
 
-                <nav class="nav-links" data-i18n-attr="aria-label:a11y.mainNav" aria-label="ناوبری اصلی">
-                    <a class="nav-link" href="#about" data-i18n="nav.about">درباره</a>
-                    <a class="nav-link" href="#expertise" data-i18n="nav.expertise">تخصص‌ها</a>
-                    <a class="nav-link" href="#journey" data-i18n="nav.journey">مسیر حرفه‌ای</a>
-                    <a class="nav-link" href="#collaborations" data-i18n="nav.collaborations">همراهان</a>
-                    <a class="nav-link" href="#insights" data-i18n="nav.insights">دیدگاه‌ها</a>
-                </nav>
+            <nav class="nav-links" aria-label="{{ __('site.main_nav') }}">
+                <a class="nav-link" href="#about">{{ Site::text('general.nav_about') }}</a>
+                <a class="nav-link" href="#expertise">{{ Site::text('general.nav_expertise') }}</a>
+                <a class="nav-link" href="#journey">{{ Site::text('general.nav_journey') }}</a>
+                <a class="nav-link" href="#collaborations">{{ Site::text('general.nav_collab') }}</a>
+                <a class="nav-link" href="#insights">{{ Site::text('general.nav_insights') }}</a>
+            </nav>
 
-                <div class="header-actions">
-                    <div class="lang-switch" role="group" data-i18n-attr="aria-label:a11y.langSwitch"
-                        aria-label="انتخاب زبان">
-                        @include('partials.lang-switch')
-                    </div>
-                    <a class="btn btn-primary header-cta" href="https://dorhi.ir/counseling/" target="_blank"
-                        rel="noopener" data-i18n="nav.cta">رزرو مشاوره</a>
-                    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false"
-                        aria-controls="mobile-menu" data-i18n-attr="aria-label:a11y.toggleMenu"
-                        aria-label="باز و بسته کردن منو">
-                        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                    </button>
+            <div class="header-actions">
+                <div class="lang-switch" role="group" aria-label="{{ __('site.lang_switch') }}">
+                    @include('partials.lang-switch')
                 </div>
+                <a class="btn btn-primary header-cta" href="{{ Site::get('general.booking_url') }}" target="_blank" rel="noopener">{{ Site::text('general.nav_cta') }}</a>
+                <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"
+                        aria-label="{{ __('site.toggle_menu') }}" data-label-open="{{ __('site.open_menu') }}" data-label-close="{{ __('site.close_menu') }}">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
             </div>
-        </div>
-    </header>
-
-    <!-- Mobile menu -->
-    <div id="mobile-menu" data-i18n-attr="aria-label:a11y.mobileMenu" aria-label="منوی موبایل">
-        <nav>
-            <a class="mobile-link" href="#about"><span data-i18n="nav.about">درباره</span><span class="m-index"
-                    data-digits="01">۰۱</span></a>
-            <a class="mobile-link" href="#expertise"><span data-i18n="nav.expertise">تخصص‌ها</span><span class="m-index"
-                    data-digits="02">۰۲</span></a>
-            <a class="mobile-link" href="#journey"><span data-i18n="nav.journey">مسیر حرفه‌ای</span><span
-                    class="m-index" data-digits="03">۰۳</span></a>
-            <a class="mobile-link" href="#collaborations"><span data-i18n="nav.collaborations">همراهان</span><span
-                    class="m-index" data-digits="04">۰۴</span></a>
-            <a class="mobile-link" href="#insights"><span data-i18n="nav.insights">دیدگاه‌ها</span><span class="m-index"
-                    data-digits="05">۰۵</span></a>
-            <a class="mobile-link" href="#contact"><span data-i18n="nav.contact">تماس</span><span class="m-index"
-                    data-digits="06">۰۶</span></a>
-        </nav>
-        <div class="mobile-menu-foot">
-            <div class="lang-switch">
-                <button class="lang-btn" type="button" data-lang="fa" aria-pressed="true"
-                    data-i18n-attr="aria-label:a11y.langFa" aria-label="فارسی">فا</button>
-                <button class="lang-btn" type="button" data-lang="en" aria-pressed="false"
-                    data-i18n-attr="aria-label:a11y.langEn" aria-label="انگلیسی">EN</button>
-            </div>
-            <a class="btn btn-primary" href="https://dorhi.ir/counseling/" target="_blank" rel="noopener"
-                data-i18n="nav.cta">رزرو مشاوره</a>
         </div>
     </div>
+</header>
+
+<div id="mobile-menu" aria-label="{{ __('site.mobile_menu') }}">
+    <nav>
+        <a class="mobile-link" href="#about"><span>{{ Site::text('general.nav_about') }}</span><span class="m-index">{{ Site::number('01') }}</span></a>
+        <a class="mobile-link" href="#expertise"><span>{{ Site::text('general.nav_expertise') }}</span><span class="m-index">{{ Site::number('02') }}</span></a>
+        <a class="mobile-link" href="#journey"><span>{{ Site::text('general.nav_journey') }}</span><span class="m-index">{{ Site::number('03') }}</span></a>
+        <a class="mobile-link" href="#collaborations"><span>{{ Site::text('general.nav_collab') }}</span><span class="m-index">{{ Site::number('04') }}</span></a>
+        <a class="mobile-link" href="#insights"><span>{{ Site::text('general.nav_insights') }}</span><span class="m-index">{{ Site::number('05') }}</span></a>
+        <a class="mobile-link" href="#contact"><span>{{ Site::text('general.nav_contact') }}</span><span class="m-index">{{ Site::number('06') }}</span></a>
+    </nav>
+    <div class="mobile-menu-foot">
+        <div class="lang-switch">
+            @include('partials.lang-switch')
+        </div>
+        <a class="btn btn-primary" href="{{ Site::get('general.booking_url') }}" target="_blank" rel="noopener">{{ Site::text('general.nav_cta') }}</a>
+    </div>
+</div>
