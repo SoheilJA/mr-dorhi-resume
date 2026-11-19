@@ -11,4 +11,6 @@ return [
     'lang_switch' => 'Select language',
     'home_aria' => ':name — Home',
     'instagram' => 'Instagram',
+    'video_player' => 'Video player',
+    'close' => 'Close',
 ];

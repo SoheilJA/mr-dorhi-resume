@@ -9,6 +9,7 @@ use App\Filament\Content\JourneyTab;
 use App\Filament\Content\ContactTab;
 use App\Filament\Content\CollabTab;
 use App\Filament\Content\GeneralTab;
+use App\Filament\Content\InsightsTab;
 use App\Models\SiteSetting;
 use BackedEnum;
 use Filament\Actions\Action;
@@ -36,7 +37,7 @@ class ManageContent extends Page
     protected static ?int $navigationSort = 1;
 
     /** بخش‌هایی که در این صفحه ذخیره می‌شوند */
-    private const GROUPS = ['general', 'hero', 'about', 'expertise', 'journey', 'collab', 'contact'];
+    private const GROUPS = ['general', 'hero', 'about', 'expertise', 'journey', 'collab','insights', 'contact'];
 
     public ?array $data = [];
 
@@ -63,6 +64,7 @@ class ManageContent extends Page
                             ExpertiseTab::make(),
                             JourneyTab::make(),
                             CollabTab::make(),
+                            InsightsTab::make(),
                             ContactTab::make(),
                             GeneralTab::make(),
 

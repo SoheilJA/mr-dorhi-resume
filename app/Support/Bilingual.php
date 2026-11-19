@@ -22,12 +22,12 @@ class Bilingual
         ]);
     }
 
-    public static function textarea(string $name, string $label, int $rows = 4): Grid
+    public static function textarea(string $name, string $label, int $rows = 4, bool $required = true): Grid
     {
         return Grid::make(2)->schema([
             Textarea::make("{$name}.fa")
-                ->label("{$label} (فارسی) ")
-                ->required()
+                ->label("{$label} (فارسی)")
+                ->required($required)
                 ->rows($rows),
             Textarea::make("{$name}.en")
                 ->label("{$label} (English)")

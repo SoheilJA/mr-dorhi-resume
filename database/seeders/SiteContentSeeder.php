@@ -275,5 +275,63 @@ class SiteContentSeeder extends Seeder
                 'co_logos' => $logos([11, 12, 13, 14, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 34, 35, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
             ]]);
         }
+
+
+        if (! SiteSetting::where('group', 'insights')->exists()) {
+            $make = fn (string $type, string $cover, string $url, array $title, ?array $excerpt = null): array => [
+                'type' => $type,
+                'cover' => ImageUpload::convert(public_path('media/' . $cover), 'insights', 900, 563),
+                'video_source' => 'link',
+                'url' => $url,
+                'title' => $title,
+                'excerpt' => $excerpt ?? ['fa' => '', 'en' => ''],
+            ];
+
+            SiteSetting::create(['group' => 'insights', 'data' => [
+                'index_label' => ['fa' => 'دیدگاه‌ها', 'en' => 'Insights'],
+                'title' => ['fa' => 'دیدگاه‌ها و روایت‌ها.', 'en' => 'Insights & perspectives.'],
+                'sub' => [
+                    'fa' => 'گزیده‌ای از ویدئوها و مقالات درباره رشد سازمانی، مدیریت فروش و سلامت مالی کسب‌وکار.',
+                    'en' => 'A selection of videos and articles on organizational growth, sales management, and the financial health of businesses.',
+                ],
+                'tag_video' => ['fa' => 'ویدئو', 'en' => 'Video'],
+                'tag_article' => ['fa' => 'مقاله', 'en' => 'Article'],
+                'watch' => ['fa' => 'مشاهده', 'en' => 'Watch'],
+                'read' => ['fa' => 'خواندن', 'en' => 'Read'],
+                'view_all' => ['fa' => 'مشاهده همه محتواها', 'en' => 'View all content'],
+                'view_all_url' => 'https://dorhi.ir/contents/',
+                'items' => [
+                    $make('video', 'video-crisis.webp',
+                        'https://dorhi.ir/%d8%a8%d8%ad%d8%b1%d8%a7%d9%86-%d8%ac%d9%86%da%af%d8%8c%d8%aa%d8%ac%d8%b1%d8%a8%db%8c%d8%a7%d8%aa-%d8%b4%d8%ae%d8%b5%db%8c-%d8%ac%d9%86%d8%a7%d8%a8-%d9%85%d9%87%d9%86%d8%af%d8%b3-%d8%af%d8%b1%d8%ad/',
+                        ['fa' => 'بحران جنگ؛ تجربیات شخصی', 'en' => 'War Crisis: Personal Experiences']),
+                    $make('video', 'video-growth.webp',
+                        'https://dorhi.ir/%d8%b1%d9%88%d8%a7%db%8c%d8%aa-%d8%b1%d8%b4%d8%af/',
+                        ['fa' => 'روایت رشد', 'en' => 'The Narrative of Growth']),
+                    $make('video', 'video-receivables.webp',
+                        'https://dorhi.ir/%da%a9%d9%86%d8%aa%d8%b1%d9%84-%d9%85%d8%b7%d8%a7%d9%84%d8%a8%d8%a7%d8%aa-%d8%b3%d8%aa%d9%88%d9%86-%d9%81%d9%82%d8%b1%d8%a7%d8%aa-%d8%b3%d9%84%d8%a7%d9%85%d8%aa-%d9%85%d8%a7%d9%84%db%8c-%d8%af%d8%b1/',
+                        [
+                            'fa' => 'کنترل مطالبات؛ ستون فقرات سلامت مالی در شرکت‌های پخش و توزیع',
+                            'en' => 'Receivables Control: The Backbone of Financial Health in Distribution Companies',
+                        ]),
+                    $make('video', 'video-capital.webp',
+                        'https://dorhi.ir/%d8%b3%d8%b1%d9%85%d8%a7%db%8c%d8%aa%d9%88%d9%86-%d8%b1%d9%88-%d9%86%d8%a7%d8%a8%d9%88%d8%af-%d9%86%da%a9%d9%86%db%8c%d9%86/',
+                        ['fa' => 'سرمایتان را نابود نکنید', 'en' => "Don't Destroy Your Capital"]),
+                    $make('article', 'article-change.webp',
+                        'https://dorhi.ir/change-in-business/',
+                        ['fa' => 'پیش‌نیازهای تغییر در کسب‌وکار', 'en' => 'Prerequisites for Change in Business'],
+                        [
+                            'fa' => 'یکی از دغدغه‌های اصلی در جلسات با صاحبان سرمایه و بنگاه‌های اقتصادی، بررسی میزان تغییری است که کسب‌وکارها لازم دارند.',
+                            'en' => 'One of the main concerns in meetings with investors and enterprises is assessing how much change a business actually needs.',
+                        ]),
+                    $make('article', 'article-productivity.webp',
+                        'https://dorhi.ir/%d8%a8%d9%87%d8%b1%d9%87-%d9%88%d8%b1%db%8c-%d9%88-%d9%85%d9%81%d9%87%d9%88%d9%85-%d8%a2%d9%86-%d8%af%d8%b1-%d9%85%d8%af%db%8c%d8%b1%db%8c%d8%aa/',
+                        ['fa' => 'بهره‌وری و مفهوم آن در مدیریت', 'en' => 'Productivity and Its Meaning in Management'],
+                        [
+                            'fa' => 'بهره‌وری سازمانی دیدگاهی فکری است که می‌خواهد وضعیت موجود را به بهترین شکل ممکن بهبود ببخشد.',
+                            'en' => 'Organizational productivity is a mindset that seeks to improve the current state of affairs in the best possible way.',
+                        ]),
+                ],
+            ]]);
+        }
     }
 }

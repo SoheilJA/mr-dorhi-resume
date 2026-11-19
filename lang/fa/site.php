@@ -10,4 +10,6 @@ return [
     'lang_switch' => 'انتخاب زبان',
     'home_aria' => ':name — صفحه نخست',
     'instagram' => 'اینستاگرام',
+    'video_player' => 'پخش‌کننده‌ی ویدئو',
+    'close' => 'بستن',
 ];

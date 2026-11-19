@@ -9,6 +9,7 @@ import {Navigation} from './navigation.js';
 import {Motion} from './animations.js';
 import {Preloader} from './preloader.js';
 import {LogoMarquee} from './marquee.js';
+import { initVideoModal } from './video-modal.js';
 
 const boot = async () => {
     // 1) Language first (may switch document to en before animations start)
@@ -29,6 +30,7 @@ const boot = async () => {
 
     // 5) Motion system
     const motion = new Motion();
+    initVideoModal();
 
     // After every language switch: recalibrate scroll triggers
     language.onSwitch(() => {
