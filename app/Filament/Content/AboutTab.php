@@ -8,6 +8,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Tabs\Tab;
 use Filament\Support\Icons\Heroicon;
+use App\Support\ImageUpload;
 
 class AboutTab
 {
@@ -41,6 +42,16 @@ class AboutTab
                     ->reorderable()
                     ->collapsible()
                     ->addActionLabel('افزودن اصل'),
+                Repeater::make('about.photos')
+                    ->label('عکس‌های نوار (حداکثر ۳)')
+                    ->schema([
+                        ImageUpload::make('image', 'عکس (نسبت ۴ به ۳)', 'about', 1000, 750)->required(),
+                        Bilingual::text('alt', 'توضیح عکس (alt)'),
+                    ])
+                    ->maxItems(3)
+                    ->reorderable()
+                    ->collapsible()
+                    ->addActionLabel('افزودن عکس'),
                 Bilingual::text('about.strip_caption', 'زیرنویس نوار عکس‌ها'),
             ]);
     }

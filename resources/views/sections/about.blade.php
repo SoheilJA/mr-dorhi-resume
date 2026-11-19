@@ -34,21 +34,13 @@
             </aside>
         </div>
         <div class="photo-strip">
-            <figure class="photo-item">
-                <img src="/images/photo-03.webp" alt="جلسه کاری و ضبط محتوا در کنار مجموعه‌ها" width="1000"
-                     height="750" loading="lazy" decoding="async"
-                     data-i18n-attr="alt:overview.photoAlt.0"/>
-            </figure>
-            <figure class="photo-item">
-                <img src="/images/photo-05.webp" alt="گروه همراهی در یک جلسه مشاوره" width="1000"
-                     height="750" loading="lazy" decoding="async"
-                     data-i18n-attr="alt:overview.photoAlt.1"/>
-            </figure>
-            <figure class="photo-item">
-                <img src="/images/photo-08.webp" alt="کارگاه آموزشی با حضور مدیران" width="1000"
-                     height="750" loading="lazy" decoding="async"
-                     data-i18n-attr="alt:overview.photoAlt.2"/>
-            </figure>
+            @foreach (array_values((array) Site::get('about.photos', [])) as $photo)
+                @continue(empty($photo['image']))
+                <figure class="photo-item">
+                    <img src="{{ Site::url($photo['image']) }}" alt="{{ Site::localize($photo['alt'] ?? null) }}"
+                         width="1000" height="750" loading="lazy" decoding="async"/>
+                </figure>
+            @endforeach
         </div>
         <p class="strip-caption">{{ Site::text('about.strip_caption') }}</p>
     </div>

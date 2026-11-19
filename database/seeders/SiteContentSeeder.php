@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\SiteSetting;
 use Illuminate\Database\Seeder;
+use App\Support\ImageUpload;
 
 class SiteContentSeeder extends Seeder
 {
@@ -224,5 +225,55 @@ class SiteContentSeeder extends Seeder
             'loc_value' => ['fa' => 'مشهد، خراسان رضوی', 'en' => 'Mashhad, Khorasan Razavi'],
             'ig_label' => ['fa' => 'اینستاگرام', 'en' => 'Instagram'],
         ]]);
+
+        // عکس‌های بخش درباره
+        $about = SiteSetting::firstOrNew(['group' => 'about']);
+        $aboutData = $about->data ?? [];
+
+        if (!array_key_exists('photos', $aboutData)) {
+            $photos = [
+                ['photo-03.webp', 'جلسه کاری و ضبط محتوا در کنار مجموعه‌ها', 'Working session and content recording with client teams'],
+                ['photo-05.webp', 'گروه همراهی در یک جلسه مشاوره', 'Consulting session with a client group'],
+                ['photo-08.webp', 'کارگاه آموزشی با حضور مدیران', 'Training workshop with managers'],
+            ];
+
+            $aboutData['photos'] = array_map(fn(array $p): array => [
+                'image' => ImageUpload::convert(public_path('images/' . $p[0]), 'about', 1000, 750),
+                'alt' => ['fa' => $p[1], 'en' => $p[2]],
+            ], $photos);
+
+            $about->data = $aboutData;
+            $about->save();
+        }
+
+        // بخش همراهان
+        if (!SiteSetting::where('group', 'collab')->exists()) {
+            $logos = fn(array $ids): array => array_map(
+                fn(int $id): string => ImageUpload::convert(public_path(sprintf('logos/logo-%02d.png', $id)), 'logos', 256),
+                $ids,
+            );
+
+            SiteSetting::create(['group' => 'collab', 'data' => [
+                'index_label' => ['fa' => 'همراهان', 'en' => 'Collaborations'],
+                'title' => ['fa' => 'مجموعه‌هایی که در کنارشان بوده‌ام.', 'en' => 'The organizations I have worked alongside.'],
+                'sub' => [
+                    'fa' => 'همراهی‌ها در دو سطح متفاوت اما مکمل انجام شده است؛ بعضی مجموعه‌ها از دل عملیات و اجرا، و بعضی از مسیر مشاوره.',
+                    'en' => 'Collaboration has happened on two complementary levels: some through operations and execution, others through consulting.',
+                ],
+                'count_word' => ['fa' => 'مجموعه', 'en' => 'organizations'],
+                'op_label' => ['fa' => 'همراهی اجرایی و عملیاتی', 'en' => 'Operational & Executive Collaboration'],
+                'co_label' => ['fa' => 'همراهی مشاوره‌ای', 'en' => 'Consulting Collaboration'],
+                'op_logo_alt' => [
+                    'fa' => 'لوگوی مجموعهٔ همراه — همراهی اجرایی و عملیاتی',
+                    'en' => 'Partner logo — operational & executive collaboration',
+                ],
+                'co_logo_alt' => [
+                    'fa' => 'لوگوی مجموعهٔ همراه — همراهی مشاوره‌ای',
+                    'en' => 'Partner logo — consulting collaboration',
+                ],
+                'op_logos' => $logos([15, 17, 23, 32, 33, 10]),
+                'co_logos' => $logos([11, 12, 13, 14, 16, 18, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 34, 35, 1, 2, 3, 4, 5, 6, 7, 8, 9]),
+            ]]);
+        }
     }
 }

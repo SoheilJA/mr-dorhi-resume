@@ -11,10 +11,6 @@ use Livewire\Features\SupportFileUploads\TemporaryUploadedFile;
 
 class ImageUpload
 {
-    /**
-     * آپلود تصویر با تبدیل خودکار به WebP.
-     * اگر $height داده شود، تصویر به همان نسبت برش می‌خورد؛ وگرنه فقط کوچک می‌شود.
-     */
     public static function make(string $name, string $label, string $directory, int $width, ?int $height = null): FileUpload
     {
         return FileUpload::make($name)
@@ -25,18 +21,23 @@ class ImageUpload
             ->image()
             ->acceptedFileTypes(['image/jpeg', 'image/png', 'image/webp'])
             ->maxSize(8192)
-            ->saveUploadedFileUsing(function (TemporaryUploadedFile $file) use ($directory, $width, $height): string {
-                $image = (new ImageManager(new Driver()))->read($file->getRealPath());
+            ->saveUploadedFileUsing(
+                fn (TemporaryUploadedFile $file): string => self::convert($file->getRealPath(), $directory, $width, $height)
+            );
+    }
 
-                $height !== null
-                    ? $image->cover($width, $height)
-                    : $image->scaleDown(width: $width);
+    /** یک فایل تصویر را به WebP تبدیل و در دیسک uploads ذخیره می‌کند؛ مسیر نسبی را برمی‌گرداند */
+    public static function convert(string $sourcePath, string $directory, int $width, ?int $height = null): string
+    {
+        $image = ImageManager::usingDriver(Driver::class)->decode($sourcePath);
 
-                $path = $directory . '/' . Str::uuid() . '.webp';
+        $height !== null
+            ? $image->cover($width, $height)
+            : $image->scaleDown(width: $width);
 
-                Storage::disk('uploads')->put($path, (string)$image->toWebp(quality: 82));
+        $path = $directory . '/' . Str::uuid() . '.webp';
 
-                return $path;
-            });
+        Storage::disk('uploads')->put($path, (string) $image->encodeUsingFileExtension('webp', quality: 82));
+        return $path;
     }
 }

@@ -73,4 +73,14 @@ class Site
 
         return $path ? Storage::disk('uploads')->url($path) : $fallback;
     }
+
+    /** آدرس یک فایل آپلودشده از روی مسیر نسبی */
+    public static function url(mixed $path): string
+    {
+        if (is_array($path)) {
+            $path = reset($path) ?: null;
+        }
+
+        return $path ? Storage::disk('uploads')->url($path) : '';
+    }
 }
