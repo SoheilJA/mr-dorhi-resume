@@ -91,10 +91,6 @@ class LanguageManager {
         document.querySelectorAll('[data-i18n-attr]').forEach((el) => applyAttrs(el, dict));
         applyDigits(lang);
 
-        document.title = dict.meta.title;
-        const desc = document.querySelector('meta[name="description"]');
-        if (desc) desc.setAttribute('content', dict.meta.description);
-
         this.updateSwitchers();
 
         if (!silent) {

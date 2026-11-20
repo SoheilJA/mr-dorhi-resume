@@ -5,32 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- ================= SEO ================= -->
-    <title>علی درحی | مشاور و مدرس کسب‌وکار — مدیرعامل چابک‌سازان آرکا</title>
-    <meta name="description"
-          content="وب‌سایت رسمی علی درحی؛ مشاور و مدرس کسب‌وکار و مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکا. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت."/>
-    <meta name="robots" content="index, follow"/>
-    <meta name="author" content="Ali Dorhi"/>
-    <link rel="canonical" href="{{ route('home', ['locale' => app()->getLocale()]) }}"/>
-    <link rel="alternate" hreflang="fa" href="{{ route('home', ['locale' => 'fa']) }}"/>
-    <link rel="alternate" hreflang="en" href="{{ route('home', ['locale' => 'en']) }}"/>
-    <link rel="alternate" hreflang="x-default" href="{{ route('home', ['locale' => 'en']) }}"/>
-    <meta name="theme-color" content="#F8F8F6"/>
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website"/>
-    <meta property="og:site_name" content="Ali Dorhi | علی درحی"/>
-    <meta property="og:title" content="علی درحی | مشاور و مدرس کسب‌وکار — مدیرعامل چابک‌سازان آرکا"/>
-    <meta property="og:description"
-          content="ساختار درست، مسیر رشد پایدار کسب‌وکار است. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت."/>
-    <meta property="og:url" content="https://dorhi.ir/"/>
-    <meta property="og:image" content="https://dorhi.ir/images/portrait.jpg"/>
-    <meta property="og:locale" content="fa_IR"/>
-    <meta property="og:locale:alternate" content="en_US"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="علی درحی | مشاور و مدرس کسب‌وکار"/>
-    <meta name="twitter:description" content="ساختار درست، مسیر رشد پایدار کسب‌وکار است."/>
-    <meta name="twitter:image" content="https://dorhi.ir/images/portrait.jpg"/>
-
+    @include('partials.seo')
     <!-- Favicon -->
     <link rel="icon" href="/favicon/favicon.ico" sizes="any"/>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png"/>
@@ -145,45 +120,6 @@
             </style>
         @endverbatim
     </noscript>
-
-    <!-- Structured data: Person -->
-    @verbatim
-        <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "علی درحی",
-    "alternateName": "Ali Dorhi",
-    "url": "https://dorhi.ir/",
-    "image": "https://dorhi.ir/images/portrait.jpg",
-    "jobTitle": "Business Consultant & Trainer",
-    "description": "مشاور و مدرس کسب‌وکار؛ ۲۰ سال تجربه اجرایی و عملیاتی در صنعت و مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکا.",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "چابک‌سازان آرکا",
-      "alternateName": "Chabok Sazan Arka",
-      "url": "https://dorhi.ir/"
-    },
-    "email": "mailto:ali.dorhi@gmail.com",
-    "telephone": "+98-939-538-9820",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Mashhad",
-      "addressRegion": "Khorasan Razavi",
-      "addressCountry": "IR"
-    },
-    "sameAs": ["https://www.instagram.com/alidorhi.ir"],
-    "knowsAbout": [
-      "Organizational Development",
-      "Marketing Strategy",
-      "Sales Management",
-      "Business Management",
-      "Productivity Improvement",
-      "Systems Thinking"
-    ]
-  }
-        </script>
-    @endverbatim
 </head>
 
 <body>

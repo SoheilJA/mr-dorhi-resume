@@ -20,6 +20,7 @@ use Filament\Schemas\Components\Form;
 use Filament\Schemas\Components\Tabs;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
+use App\Filament\Content\SeoTab;
 
 /**
  * @property-read Schema $form
@@ -37,7 +38,7 @@ class ManageContent extends Page
     protected static ?int $navigationSort = 1;
 
     /** بخش‌هایی که در این صفحه ذخیره می‌شوند */
-    private const GROUPS = ['general', 'hero', 'about', 'expertise', 'journey', 'collab','insights', 'contact'];
+    private const GROUPS = ['general', 'hero', 'about', 'expertise', 'journey', 'collab','insights', 'contact','seo'];
 
     public ?array $data = [];
 
@@ -66,6 +67,7 @@ class ManageContent extends Page
                             CollabTab::make(),
                             InsightsTab::make(),
                             ContactTab::make(),
+                            SeoTab::make(),
                             GeneralTab::make(),
 
                         ])

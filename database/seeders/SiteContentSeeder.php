@@ -277,8 +277,8 @@ class SiteContentSeeder extends Seeder
         }
 
 
-        if (! SiteSetting::where('group', 'insights')->exists()) {
-            $make = fn (string $type, string $cover, string $url, array $title, ?array $excerpt = null): array => [
+        if (!SiteSetting::where('group', 'insights')->exists()) {
+            $make = fn(string $type, string $cover, string $url, array $title, ?array $excerpt = null): array => [
                 'type' => $type,
                 'cover' => ImageUpload::convert(public_path('media/' . $cover), 'insights', 900, 563),
                 'video_source' => 'link',
@@ -333,5 +333,25 @@ class SiteContentSeeder extends Seeder
                 ],
             ]]);
         }
+
+        SiteSetting::firstOrCreate(['group' => 'seo'], ['data' => [
+            'site_name' => ['fa' => 'علی درحی', 'en' => 'Ali Dorhi'],
+            'title' => [
+                'fa' => 'علی درحی | مشاور و مدرس کسب‌وکار — مدیرعامل چابک‌سازان آرکا',
+                'en' => 'Ali Dorhi | Business Consultant & Trainer — CEO, Chabok Sazan Arka',
+            ],
+            'description' => [
+                'fa' => 'وب‌سایت رسمی علی درحی؛ مشاور و مدرس کسب‌وکار و مدیرعامل شرکت مشاوره سازمانی چابک‌سازان آرکا. ۲۰ سال تجربه اجرایی و عملیاتی در صنعت؛ مشاوره سازمانی، بازاریابی، فروش و مدیریت.',
+                'en' => 'Official website of Ali Dorhi — business consultant, trainer, and CEO of Chabok Sazan Arka, an organizational consulting company. 20 years of executive and operational experience in industry; consulting in marketing, sales, and management.',
+            ],
+            'job_title' => ['fa' => 'مشاور و مدرس کسب‌وکار', 'en' => 'Business Consultant & Trainer'],
+            'org_name' => ['fa' => 'چابک‌سازان آرکا', 'en' => 'Chabok Sazan Arka'],
+            'city' => ['fa' => 'مشهد', 'en' => 'Mashhad'],
+            'region' => ['fa' => 'خراسان رضوی', 'en' => 'Khorasan Razavi'],
+            'knows_about' => [
+                'fa' => ['توسعه سازمانی', 'استراتژی بازاریابی', 'مدیریت فروش', 'مدیریت کسب‌وکار', 'افزایش بهره‌وری', 'تفکر سیستمی'],
+                'en' => ['Organizational Development', 'Marketing Strategy', 'Sales Management', 'Business Management', 'Productivity Improvement', 'Systems Thinking'],
+            ],
+        ]]);
     }
 }
