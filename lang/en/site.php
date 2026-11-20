@@ -13,4 +13,6 @@ return [
     'instagram' => 'Instagram',
     'video_player' => 'Video player',
     'close' => 'Close',
+    'prev' => 'Previous',
+    'next' => 'Next',
 ];
